@@ -1,13 +1,13 @@
 import React from "react";
 
-import "./NavBar.scss";
+import { LogoImg } from "./NavBar.styles";
 import { images } from "../../constants";
 
 const NavBar = () => {
   return (
     <nav>
       <div>
-        <img src={images.snecek_logo} alt="snail logo" className="rounded"></img>
+        <LogoImg src={images.snecek_logo} alt="snail logo" className="rounded"></LogoImg>
       </div>
       <ul>
         {["home", "about", "contact", "work", "skills", "self-education"].map((item, index) => {
