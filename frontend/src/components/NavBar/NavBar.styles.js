@@ -49,7 +49,6 @@ export const MenuContent = styled(motion.div)`
   right: 0;
   z-index: 10;
   padding: 1rem;
-  width: 300px;
   height: 100vh;
   background-color: var(--white-color);
   box-shadow: 0 0 20px pink;

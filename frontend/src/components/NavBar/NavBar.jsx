@@ -28,13 +28,13 @@ const NavBar = () => {
       <Menu>
         <HiMenu onClick={() => setToggleMenu(true)} />
         {toggleMenu && (
-          <MenuContent as={motion.div} whileInView={{ x: [300, 0] }} transition={{ duration: 1 }}>
+          <MenuContent as={motion.div} initial={{ width: 0 }} animate={{ width: '80%' }}>
             <HiX onClick={() => setToggleMenu(false)} />
             <NavLinks>
               {menuArray.map((item, index) => {
                 return (
                   <li key={`mobile-menu-${index}`}>
-                    <a href={`#${item}`} onClick={() => setToggleMenu(true)}>
+                    <a href={`#${item}`} onClick={() => setToggleMenu(false)}>
                       {item}
                     </a>
                   </li>
