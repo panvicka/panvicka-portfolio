@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+import { AppWrapper } from "../../wrapper";
 import { HeroWrapper, HeroText, HeroImage } from "./Header.styles";
 import { images } from "../../constants";
 
@@ -21,4 +22,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AppWrapper(Header, 'home');

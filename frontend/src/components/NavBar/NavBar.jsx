@@ -4,11 +4,10 @@ import { motion } from "framer-motion";
 
 import { Navbar, LogoContainer, NavLinks, Menu, MenuContent } from "./NavBar.styles";
 import { images } from "../../constants";
+import { menuArray } from "../../constants/menu-items";
 
 const NavBar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
-
-  const menuArray = ["home", "about", "contact", "work", "skills", "self-education"];
 
   return (
     <Navbar>
@@ -28,7 +27,7 @@ const NavBar = () => {
       <Menu>
         <HiMenu onClick={() => setToggleMenu(true)} />
         {toggleMenu && (
-          <MenuContent as={motion.div} initial={{ width: 0 }} animate={{ width: '80%' }}>
+          <MenuContent as={motion.div} initial={{ width: 0 }} animate={{ width: "80%" }}>
             <HiX onClick={() => setToggleMenu(false)} />
             <NavLinks>
               {menuArray.map((item, index) => {

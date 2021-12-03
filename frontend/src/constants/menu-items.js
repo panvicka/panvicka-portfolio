@@ -1,0 +1,1 @@
+export const menuArray = ["home", "about", "skills", "work", "contact", "self-education"];

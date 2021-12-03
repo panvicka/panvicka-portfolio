@@ -1,7 +1,8 @@
 import React from "react";
+import { AppWrapper } from "../../wrapper";
 
 const Skills = () => {
   return <div>Skills</div>;
 };
 
-export default Skills;
+export default AppWrapper(Skills, "skills");
