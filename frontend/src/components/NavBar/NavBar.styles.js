@@ -12,10 +12,10 @@ export const LogoContainer = styled(globalStyles.FlexCol)`
     height: 130px;
     width: 130px;
 
-    @media screen and (min-width: 1500px) {
+    /* @media screen and (min-width: 1500px) {
       height: 200px;
       width: 200px;
-    }
+    } */
   }
 `;
 
