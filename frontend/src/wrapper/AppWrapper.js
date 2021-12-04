@@ -6,9 +6,10 @@ import { NavDots, Socials } from "../components";
 const WrapperDiv = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex: 1;
   height: 100%;
+  width: 100%;
+  border: 5px dotted pink;
 `;
 
 const AppWrapper = (Component, idName, classNames) =>
@@ -16,9 +17,9 @@ const AppWrapper = (Component, idName, classNames) =>
     return (
       <WrapperDiv id={idName}>
         <Socials />
-        <div>
-          <Component />
-        </div>
+
+        <Component />
+
         <NavDots active={idName} />
       </WrapperDiv>
     );

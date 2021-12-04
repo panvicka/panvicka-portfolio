@@ -10,6 +10,7 @@ export const HeroWrapper = styled(globalStyles.FlexRow)`
   max-width: 1000px;
   margin: 0 auto;
   padding: 6rem 2rem 0 ;
+  border: 2px solid red;
 `;
 
 export const HeroText = styled(globalStyles.FlexCol)`

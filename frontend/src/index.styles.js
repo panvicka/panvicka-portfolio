@@ -1,4 +1,19 @@
+import { BsArrowUpLeftSquare } from "react-icons/bs";
 import styled from "styled-components";
+
+export const SectionTitle = styled.h2`
+  text-transform: uppercase;
+  color: black;
+  font-size: 2em;
+  margin-bottom: 1.5rem;
+`;
+
+export const SectionSubTitle = styled.h3`
+  text-transform: uppercase;
+  color: black;
+  font-size: 1em;
+  margin-bottom: 1.5rem;
+`;
 
 export const FlexRow = styled.div`
   display: flex;
@@ -23,5 +38,3 @@ export const FlexColCenter = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
-
