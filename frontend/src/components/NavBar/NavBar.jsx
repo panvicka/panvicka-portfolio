@@ -3,6 +3,7 @@ import { HiMenu, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 
 import { Navbar, LogoContainer, NavLinks, Menu, MenuContent } from "./NavBar.styles";
+import LanguageSelect from "../LanguageSelect/LanguageSelect";
 import { images } from "../../constants";
 import { menuArray } from "../../constants/menu-items";
 
@@ -10,6 +11,7 @@ const NavBar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
+    <>
     <Navbar>
       <LogoContainer>
         <img src={images.snecek_logo} alt="snail logo" className="rounded" />
@@ -43,7 +45,9 @@ const NavBar = () => {
           </MenuContent>
         )}
       </Menu>
+      <LanguageSelect />
     </Navbar>
+    </>
   );
 };
 

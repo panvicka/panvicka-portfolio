@@ -1,4 +1,3 @@
-import { BsArrowUpLeftSquare } from "react-icons/bs";
 import styled from "styled-components";
 
 export const SectionTitle = styled.h2`

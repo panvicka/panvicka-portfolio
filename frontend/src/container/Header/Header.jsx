@@ -1,15 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 import { AppWrapper } from "../../wrapper";
 import { HeroWrapper, HeroText, HeroImage } from "./Header.styles";
 import { images } from "../../constants";
 
 const Header = () => {
+  const { t } = useTranslation();
+
   return (
     <HeroWrapper>
       <HeroText as={motion.div} transition={{ duration: 0.5 }} whileInView={{ x: [-100, 0], opacity: [0, 1] }}>
-        <p>Hello, I am</p>
+        <p>{t("Hello-I-am")}</p>
         <h1>Eliška Veisová</h1>
         <p>embedded HW/SW engineer for 5 years</p>
         <p>learning full-stack web development</p>
@@ -22,4 +25,4 @@ const Header = () => {
   );
 };
 
-export default AppWrapper(Header, 'home');
+export default AppWrapper(Header, "home");
