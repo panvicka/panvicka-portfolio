@@ -6,7 +6,7 @@ export default {
     {
       name: "language",
       title: "Language",
-      type: "string",
+      type: "localeStr",
     },
     {
       name: "level",
@@ -16,7 +16,7 @@ export default {
     {
       name: "info",
       title: "Info",
-      type: "string",
+      type: "localeStr",
     },
     {
       name: "icon",

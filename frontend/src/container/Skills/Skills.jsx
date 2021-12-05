@@ -7,6 +7,7 @@ import { AppWrapper } from "../../wrapper";
 import { images } from "../../constants";
 
 import { SectionTitle, SectionSubTitle } from "../../index.styles";
+import { useLanguage, useLanguageUpdate } from "../../context/LanguageContext";
 
 import {
   SkillsContentWrapper,
@@ -21,6 +22,8 @@ import LanguageSkill from "./LanguageSkill/LanguageSkill";
 const Skills = () => {
   const [skills, setSkills] = useState([]);
   const [languageSkills, setLanguageSkills] = useState([]);
+
+  const currentLanguage = useLanguage();
 
   useEffect(() => {
     const query = '*[_type == "skills"]';
@@ -90,10 +93,10 @@ const Skills = () => {
           return (
             <LanguageSkill
               key={index}
-              language={lang.language}
+              language={lang.language[currentLanguage]}
               icon={urlFor(lang.icon)}
               level={lang.level}
-              info={lang.info}
+              info={lang.info[currentLanguage]}
             />
           );
         })}
