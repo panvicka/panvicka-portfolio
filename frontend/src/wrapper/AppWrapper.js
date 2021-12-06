@@ -7,7 +7,7 @@ const WrapperDiv = styled.div`
   display: flex;
   flex-direction: row;
   flex: 1;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   border: 5px dotted pink;
 `;
