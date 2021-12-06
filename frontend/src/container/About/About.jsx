@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { urlFor, client } from "../../clients";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 import { AppWrapper } from "../../wrapper";
 import { useLanguage } from "../../context/LanguageContext";
-import { AboutContentWrapper, AboutContentItem, AboutContentItemWrapper } from "./About.styles";
+import {
+  AboutContentWrapper,
+  AboutContentItem,
+  AboutContentItemWrapper,
+  AboutYears,
+  AboutContentHeader,
+  AboutContentInfo,
+} from "./About.styles";
 import { SectionTitle } from "../../index.styles";
 
 const About = () => {
@@ -31,12 +39,20 @@ const About = () => {
         {about.map((aboutItem, index) => {
           return (
             <AboutContentItem key={aboutItem._id}>
-              {aboutItem.aboutImage && <img src={urlFor(aboutItem.aboutImage)} />}
-              <div>
-                <div>{aboutItem.title[currentLanguage]}</div>
-                <div>{aboutItem.experience}</div>
-                <div>{aboutItem.text[currentLanguage]}</div>
-              </div>
+              <AboutYears
+                as={motion.div}
+                transition={{ duration: 0.3 }}
+                whileInView={{ height: 70, width: 70, opacity: 1 }}
+          
+              >
+                {aboutItem.experience}
+                <span>y</span>
+              </AboutYears>
+              <AboutContentHeader>{aboutItem.title[currentLanguage]}</AboutContentHeader>
+              <AboutContentInfo>
+                {aboutItem.aboutImage && <img src={urlFor(aboutItem.aboutImage)} />}
+                <p>{aboutItem.text[currentLanguage]}</p>
+              </AboutContentInfo>
             </AboutContentItem>
           );
         })}
