@@ -6,6 +6,7 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 import localeString from "./localeString";
 import languages from "./languages";
 import skills from "./skills";
+import about from "./about";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -17,6 +18,7 @@ export default createSchema({
     localeString,
     languages,
     skills,
+    about,
     /* Your types here! */
   ]),
 });
