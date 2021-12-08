@@ -21,6 +21,7 @@ export default createSchema({
     skills,
     about,
     work,
+
     /* Your types here! */
   ]),
 });

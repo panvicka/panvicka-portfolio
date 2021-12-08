@@ -1,5 +1,5 @@
 import React from "react";
-import { About, Footer, Header, SelfEducation, Skills, Work } from "./container";
+import { About, Footer, Header, Bio, Skills, Work } from "./container";
 import { NavBar } from "./components";
 import "./App.scss";
 import "flag-icons/css/flag-icons.css";
@@ -36,7 +36,7 @@ const App = () => {
         <Skills />
         <About />
         <Work />
-        <SelfEducation />
+        <Bio />
         <Footer />
       </LanguageProvider>
     </div>
