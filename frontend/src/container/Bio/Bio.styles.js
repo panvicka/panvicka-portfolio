@@ -12,31 +12,37 @@ export const BioWrapper = styled(globalStyles.FlexCol)`
   max-width: 1000px;
   margin: 0 auto;
   padding: 15rem 2rem 0rem 2rem;
+
+  p {
+    margin: 0 2rem;
+    line-height: 1.5em;
+    font-size: 1.1em;
+  }
 `;
 
 export const BlockElement = styled(globalStyles.FlexRow)`
-   width: 80%;
-   border: 2px solid red;
+  width: 80%;
+  /* border: 2px solid red; */
+  /* margin: 0.1rem 0; */
 
+  margin-top: ${(props) => (props.first ? "0.5rem" : 0)};
 
-   .prompt {
-   
-    width: 50%;
+  .prompt {
+    width: 20%;
     text-align: right;
     padding-right: 0.4rem;
-    color: grey
-   }
+    color: grey;
+  }
 
-   .reply {
-    width: 50%;
+  .reply {
+    width: 80%;
     text-align: left;
     padding-left: 1rem;
     font-weight: bolder;
-   }
-
+  }
 `;
 
 export const BioContentWrapper = styled(globalStyles.FlexColCenter)`
   width: 100%;
-  border: 2px solid blue;
+  margin-top: 2rem;
 `;

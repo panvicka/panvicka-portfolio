@@ -1,6 +1,28 @@
 {
-    "Hello-I-am": "Hallo ich bin",
-    "About": "Über mich",
-    "Work": "Projekts"
-  }
-  
+  "Hello-I-am": "Hallo ich bin",
+  "About": "Über mich",
+  "Work": "Projekts",
+  "tra-bio": "Kurze Biographie",
+  "tra-name": "Name",
+  "tra-nickname": "Beiname",
+  "tra-languages": "Sprachen",
+  "tra-language-english": "English (C1)",
+  "tra-language-german": "Deutsch (C1, TELC)",
+  "tra-language-czech": "Tschechisch (Muttersprache)",
+  "tra-date": "Geburtsdatum",
+  "tra-born-place": "Geburtsort",
+  "tra-lives": "Wohnort",
+  "tra-high-school": "Abitur",
+  "tra-high-school-study": "Fachschule für Maschinenbau und Elektrotechnik, Technische Lyzeum",
+  "tra-bachelor": "Bachelor-Abschluss",
+  "tra-bachelor-study": "Technische Universität Liberec, Elektronische Informations- und Steuerungssysteme",
+  "tra-master": "master degree",
+  "tra-master-study-1": "Technische Universität Liberec, Mechatronik",
+  "tra-master-study-2": "Hochschule Zittau/Görlitz, Mechatronik",
+  "tra-hobby": "Hobby",
+  "tra-climbing": "Klettern",
+  "tra-programming": "Programmierung",
+  "tra-hiking": "Fernwandern",
+  "tra-reading": "Lesen",
+  "tra-fantasy-scifi": "Fantasy/Sci-Fi"
+}
