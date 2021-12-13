@@ -32,39 +32,51 @@ const bioInfo = [
     reply: "Liberec/Bautzen",
   },
   {
-    prompt: "tra-high-school",
-    reply: "tra-high-school-study",
+    prompt: "20XX-20XX",
+    reply: "tra-bachelor-degree;tra-tul;tra-eirs",
   },
   {
-    prompt: "tra-bachelor",
-    reply: "tra-bachelor-study",
+    prompt: "20XX-20XX",
+    reply: "tra-master-degree;tra-tul;tra-mechatronics",
   },
   {
-    prompt: "tra-master",
-    reply: "tra-master-study-1;tra-master-study-2",
+    prompt: "20XX-20XX",
+    reply: "tra-master-degree;tra-hochschule;tra-mechatronics",
   },
+  {
+    prompt: "20XX-20XX",
+    reply: "tra-work-position;ULT AG, Löbau;tra-work-description",
+  },
+
   {
     prompt: "tra-hobby",
     reply: "tra-climbing;tra-programming;tra-hiking;tra-reading;tra-fantasy-scifi",
   },
 ];
 
-function Block({ prompt, reply, first }) {
+function Block({ prompt, reply }) {
+  const { t } = useTranslation();
+
+  let words = reply.split(";");
+
   return (
-    <BlockElement first={first}>
+    <BlockElement>
       <motion.div
         transition={{ duration: 0.4, ease: "easeIn" }}
         whileInView={{ x: [-200, 0], opacity: [0.8, 1] }}
         className="prompt"
       >
-        {prompt}
+        {t(prompt)}
       </motion.div>
+
       <motion.div
         transition={{ duration: 0.4, ease: "easeIn" }}
         whileInView={{ x: [+200, 0], opacity: [0.8, 1] }}
         className="reply"
       >
-        {reply}
+        {words.map((rep) => {
+          return <p>{t(rep)}</p>;
+        })}
       </motion.div>
     </BlockElement>
   );
@@ -77,24 +89,11 @@ function Bio() {
     <BioWrapper>
       <SectionTitle>{t("tra-bio")}</SectionTitle>
 
-      <p>{t("tra-bio-text")}</p>
+      {/* <p>{t("tra-bio-text")}</p> */}
 
       <BioContentWrapper>
-        {bioInfo.map((info) => {
-          const words = info.reply.split(";");
-
-          if (words.length > 0) {
-            return words.map((item, index) => {
-              return (
-                <Block
-                  key={index}
-                  first={index == 0 ? true : false}
-                  prompt={index == 0 ? t(info.prompt) : ""}
-                  reply={t(item)}
-                ></Block>
-              );
-            });
-          }
+        {bioInfo.map((info, index) => {
+          return <Block key={index} prompt={info.prompt} reply={info.reply}></Block>;
         })}
       </BioContentWrapper>
     </BioWrapper>

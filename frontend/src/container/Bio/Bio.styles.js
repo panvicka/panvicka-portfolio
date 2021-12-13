@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import * as globalStyles from "../../index.styles";
-import { SectionTitle, SectionSubTitle } from "../../index.styles";
 
 export const BioWrapper = styled(globalStyles.FlexCol)`
   border: 3px solid green;
@@ -14,35 +13,47 @@ export const BioWrapper = styled(globalStyles.FlexCol)`
   padding: 15rem 2rem 0rem 2rem;
 
   p {
-    margin: 0 2rem;
-    line-height: 1.5em;
-    font-size: 1.1em;
+    line-height: 1.1em;
   }
 `;
 
 export const BlockElement = styled(globalStyles.FlexRow)`
   width: 80%;
-  /* border: 2px solid red; */
-  /* margin: 0.1rem 0; */
-
-  margin-top: ${(props) => (props.first ? "0.5rem" : 0)};
+  margin: 0.5rem 0 0 0;
+  padding: 0.1rem;
+  min-width: 280px;
 
   .prompt {
-    width: 20%;
+    width: 50%;
     text-align: right;
-    padding-right: 0.4rem;
-    color: grey;
+    padding-right: 0.6rem;
+    color: blue;
   }
 
   .reply {
-    width: 80%;
+    width: 50%;
     text-align: left;
-    padding-left: 1rem;
-    font-weight: bolder;
+    padding-left: 0.6rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.9rem 0 0 0;
+    font-size: 1.2em;
+
+    .prompt,
+    .reply {
+      text-align: center;
+      width: 100%;
+      padding-left: 0rem;
+      padding-right: 0rem;
+    }
   }
 `;
 
 export const BioContentWrapper = styled(globalStyles.FlexColCenter)`
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
 `;
