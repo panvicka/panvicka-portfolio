@@ -1,5 +1,5 @@
 import React from "react";
-import { About, Footer, Header, Bio, Skills, Work } from "./container";
+import { About, Footer, Header, Bio, Skills, Work, Contact } from "./container";
 import { NavBar } from "./components";
 import "./App.scss";
 import "flag-icons/css/flag-icons.css";
@@ -10,6 +10,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import HttpApi from "i18next-http-backend";
 
 import LanguageProvider from "./context/LanguageContext";
+
 
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
@@ -36,6 +37,7 @@ const App = () => {
         <Skills />
         <About />
         <Work />
+        <Contact />
         <Bio />
         <Footer />
       </LanguageProvider>

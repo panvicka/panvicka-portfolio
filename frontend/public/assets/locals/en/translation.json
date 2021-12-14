@@ -26,5 +26,14 @@
   "tra-programming": "programming",
   "tra-hiking": "long distance hiking",
   "tra-reading": "reading",
-  "tra-fantasy-scifi": "fantasy/sci-fi"
+  "tra-fantasy-scifi": "fantasy/sci-fi",
+  "tra-contact": "contact me",
+  "tra-required": "required",
+  "tra-wrong-format": "wrong format",
+  "tra-send": "send",
+  "tra-message-text": "text",
+  "tra-email": "e-mail",
+  "tra-thank-you-message": "Thank you for your message, we will be in touch in no time!",
+  "tra-message-send": "Your message is being send...",
+  "tra-message-error": "Error when sending your message :("
 }

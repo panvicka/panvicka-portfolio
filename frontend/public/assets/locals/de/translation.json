@@ -25,5 +25,14 @@
   "tra-programming": "Programmierung",
   "tra-hiking": "Fernwandern",
   "tra-reading": "Lesen",
-  "tra-fantasy-scifi": "Fantasy/Sci-Fi"
+  "tra-fantasy-scifi": "Fantasy/Sci-Fi",
+  "tra-contact": "Kontakt",
+  "tra-required": "Erforderlich!",
+  "tra-wrong-format": "Ungültiges Format",
+  "tra-send": "Schicken",
+  "tra-message-text": "Text",
+  "tra-email": "E-mail",
+  "tra-thank-you-message": "Vielen Dank für Ihre Nachricht. Ich werde mich umgehend bei Ihnen melden.",
+  "tra-message-send": "Ihre Nachricht wird gesendet...",
+  "tra-message-error": "Fehler beim Senden :("
 }

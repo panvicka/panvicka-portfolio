@@ -25,5 +25,14 @@
   "tra-programming": "programování",
   "tra-hiking": "dálková turistiku",
   "tra-reading": "čtení",
-  "tra-fantasy-scifi": "fantasy/sci-fi"
+  "tra-fantasy-scifi": "fantasy/sci-fi",
+  "tra-contact": "kontakt",
+  "tra-required": "vyžadovaný údaj",
+  "tra-wrong-format": "neplatný údaj",
+  "tra-send": "poslat",
+  "tra-message-text": "zpráva",
+  "tra-email": "e-mailová adresa",
+  "tra-thank-you-message": "Děkuji za zprávu, co nejdříve se Vám ozvu zpět!",
+  "tra-message-send": "Vaše zpráva se posílá...",
+  "tra-message-error": "Chyba při odesílání :("
 }
