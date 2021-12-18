@@ -20,18 +20,6 @@ export const AboutYears = styled(globalStyles.FlexRowCenter)`
   }
 `;
 
-export const AboutContentWrapper = styled(globalStyles.FlexCol)`
-  border: 3px solid green;
-  flex: 1;
-  height: 100%;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 15rem 2rem 0rem 2rem;
-`;
-
 export const AboutContentHeader = styled.h3`
   color: black;
   text-align: center;
@@ -54,7 +42,6 @@ export const AboutContentInfo = styled(globalStyles.FlexRow)`
     height: auto;
     margin-right: 1rem;
   }
-
 `;
 
 export const AboutContentItem = styled(globalStyles.FlexCol)`

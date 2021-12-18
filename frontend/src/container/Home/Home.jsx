@@ -3,14 +3,17 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 import { AppWrapper } from "../../wrapper";
-import { HeroWrapper, HeroText, HeroImage } from "./Header.styles";
+import { HeroText, HeroImage } from "./Home.styles";
 import { images } from "../../constants";
+import { Socials } from "../../components";
 
-const Header = () => {
+import { PageWrapper } from "../../index.styles";
+
+const Home = () => {
   const { t } = useTranslation();
 
   return (
-    <HeroWrapper>
+    <PageWrapper>
       <HeroText as={motion.div} transition={{ duration: 0.5 }} whileInView={{ x: [-100, 0], opacity: [0, 1] }}>
         <p>{t("Hello-I-am")}</p>
         <h1>Eliška Veisová</h1>
@@ -21,8 +24,10 @@ const Header = () => {
       <HeroImage>
         <img src={images.profile_pic} alt="profile"></img>
       </HeroImage>
-    </HeroWrapper>
+
+      <Socials />
+    </PageWrapper>
   );
 };
 
-export default AppWrapper(Header, "home");
+export default AppWrapper(Home, "home");

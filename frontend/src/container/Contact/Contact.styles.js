@@ -1,28 +1,12 @@
 import styled from "styled-components";
 import * as globalStyles from "../../index.styles";
 
-export const ContactWrapper = styled(globalStyles.FlexCol)`
-  border: 3px solid green;
-  flex: 1;
-  min-height: 100%;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 15rem 2rem 0rem 2rem;
-
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-`;
-
 export const Form = styled.form`
   width: 100%;
   min-width: 200px;
   max-width: 500px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 

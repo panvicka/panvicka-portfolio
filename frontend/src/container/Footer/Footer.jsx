@@ -2,6 +2,7 @@ import React from "react";
 import { DiReact } from "react-icons/di";
 
 import { BsGithub } from "react-icons/bs";
+import { Socials } from "../../components";
 
 import styled from "styled-components";
 import * as globalStyles from "../../index.styles";
@@ -24,7 +25,7 @@ export const FooterWrapper = styled(globalStyles.FlexRow)`
   border: 3px solid black;
   padding: 2rem 15rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 
   a {
     text-decoration: none;
@@ -58,6 +59,7 @@ const Footer = () => {
 
   return (
     <FooterWrapper>
+       <Socials />
       <FooterSection>
         <FooterGitHubLink href="">
           Check page <BsGithub />
@@ -86,6 +88,8 @@ const Footer = () => {
           Ui icons created by surang
         </a>
       </FooterSectionCredits>
+
+     
     </FooterWrapper>
   );
 };

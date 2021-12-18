@@ -9,7 +9,7 @@ import Tag from "../../components/Tag/Tag";
 
 import { WorkContentWrapper, WorkItem, WorkHeader, WorkItemWrapper, WorkImage, WorkTags } from "./Work.styles";
 
-import { SectionTitle, SectionSubTitle } from "../../index.styles";
+import { SectionTitle, SectionSubTitle, PageWrapper } from "../../index.styles";
 import { useLanguage, useLanguageUpdate } from "../../context/LanguageContext";
 
 const Work = () => {
@@ -51,7 +51,7 @@ const Work = () => {
   };
 
   return (
-    <WorkContentWrapper>
+    <PageWrapper column>
       <SectionTitle>{t("Work")}</SectionTitle>
 
       <WorkItemWrapper>
@@ -78,7 +78,7 @@ const Work = () => {
           );
         })}
       </WorkItemWrapper>
-    </WorkContentWrapper>
+    </PageWrapper>
   );
 };
 

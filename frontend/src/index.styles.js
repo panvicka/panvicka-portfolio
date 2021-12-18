@@ -1,5 +1,19 @@
 import styled from "styled-components";
 
+export const PageWrapper = styled.div`
+  display: flex;
+  flex-direction: ${(props) => (props.column ? "column" : "row")};
+  border: 3px solid green;
+  flex: 1;
+  min-height: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15rem 2rem 0rem 2rem;
+`;
+
 export const SectionTitle = styled.h2`
   text-transform: uppercase;
   color: black;

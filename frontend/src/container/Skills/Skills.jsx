@@ -6,7 +6,7 @@ import { urlFor, client } from "../../clients";
 import { AppWrapper } from "../../wrapper";
 import { images } from "../../constants";
 
-import { SectionTitle, SectionSubTitle } from "../../index.styles";
+import { SectionTitle, SectionSubTitle, PageWrapper } from "../../index.styles";
 import { useLanguage, useLanguageUpdate } from "../../context/LanguageContext";
 
 import {
@@ -44,7 +44,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <SkillsContentWrapper>
+    <PageWrapper column>
       <SectionTitle>Skills</SectionTitle>
       <SkillsSectionWrapper>
         <SkillsSection as={motion.div} transition={{ duration: 0.5 }} whileInView={{ x: [-100, 0], opacity: [0, 1] }}>
@@ -84,7 +84,7 @@ const Skills = () => {
         </SkillsSection>
       </SkillsSectionWrapper>
 
-      <SkillsSectionWrapper
+      {/* <SkillsSectionWrapper
         as={motion.div}
         transition={{ duration: 0.5 }}
         whileInView={{ y: [100, 0], opacity: [0, 1] }}
@@ -100,8 +100,8 @@ const Skills = () => {
             />
           );
         })}
-      </SkillsSectionWrapper>
-    </SkillsContentWrapper>
+      </SkillsSectionWrapper> */}
+    </PageWrapper>
   );
 };
 

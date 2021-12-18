@@ -1,5 +1,5 @@
 import React from "react";
-import { About, Footer, Header, Bio, Skills, Work, Contact } from "./container";
+import { About, Footer, Home, Bio, Skills, Work, Contact } from "./container";
 import { NavBar } from "./components";
 import "./App.scss";
 import "flag-icons/css/flag-icons.css";
@@ -33,12 +33,12 @@ const App = () => {
     <div className="app">
       <LanguageProvider>
         <NavBar />
-        <Header />
-        <Skills />
+        <Home />
         <About />
+        <Skills />
         <Work />
-        <Contact />
         <Bio />
+        <Contact />
         <Footer />
       </LanguageProvider>
     </div>

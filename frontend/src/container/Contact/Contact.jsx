@@ -8,8 +8,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 import { AppWrapper } from "../../wrapper";
 
-import { ContactWrapper, Form, InputWrapper } from "./Contact.styles";
-import { SectionTitle } from "../../index.styles";
+import { Form, InputWrapper } from "./Contact.styles";
+import { PageWrapper, SectionTitle } from "../../index.styles";
 
 init(process.env.REACT_APP_EMAILJS_USER_ID);
 
@@ -82,7 +82,7 @@ const Contact = () => {
   };
 
   return (
-    <ContactWrapper>
+    <PageWrapper column>
       <SectionTitle>{t("tra-contact")}</SectionTitle>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <InputWrapper>
@@ -149,7 +149,7 @@ const Contact = () => {
       {emailSent && <p class="info success"> {t("tra-thank-you-message")}</p>}
       {emailSending && <p class="info"> {t("tra-message-send")}</p>}
       {emailSendingError && <p class="info"> {t("tra-message-error")}</p>}
-    </ContactWrapper>
+    </PageWrapper>
   );
 };
 

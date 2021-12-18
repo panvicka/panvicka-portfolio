@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { NavDots, Socials } from "../components";
+import { NavDots } from "../components";
 
 const WrapperDiv = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ const AppWrapper = (Component, idName, classNames) =>
   function HOC() {
     return (
       <WrapperDiv id={idName}>
-        <Socials />
+        {/* <Socials /> */}
 
         <Component />
 

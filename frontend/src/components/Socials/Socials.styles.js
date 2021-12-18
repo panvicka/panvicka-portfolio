@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import * as globalStyles from "../../index.styles";
 
-export const SocialWrapper = styled(globalStyles.FlexCol)`
+export const SocialWrapper = styled(globalStyles.FlexRow)`
   justify-content: flex-end;
   align-items: center;
   padding: 1rem;
@@ -12,7 +12,7 @@ export const SocialIcon = styled(globalStyles.FlexCol)`
   height: 40px;
   border-radius: 50%;
   background-color: var(--white-color);
-  margin: 0.25rem 0;
+  margin: 0.25rem 0.25rem;
   border: 1px solid var(--lightGray-color);
 
   display: flex;

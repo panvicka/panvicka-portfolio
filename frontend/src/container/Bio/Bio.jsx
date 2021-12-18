@@ -2,8 +2,8 @@ import React from "react";
 import { AppWrapper } from "../../wrapper";
 import { motion } from "framer-motion";
 
-import { SectionTitle } from "../../index.styles";
-import { BioWrapper, BlockElement, BioContentWrapper } from "./Bio.styles";
+import { SectionTitle, PageWrapper } from "../../index.styles";
+import { BlockElement, BioContentWrapper } from "./Bio.styles";
 import { useTranslation } from "react-i18next";
 
 const bioInfo = [
@@ -86,7 +86,7 @@ function Bio() {
   const { t } = useTranslation();
 
   return (
-    <BioWrapper>
+    <PageWrapper>
       <SectionTitle>{t("tra-bio")}</SectionTitle>
 
       {/* <p>{t("tra-bio-text")}</p> */}
@@ -96,7 +96,7 @@ function Bio() {
           return <Block key={index} prompt={info.prompt} reply={info.reply}></Block>;
         })}
       </BioContentWrapper>
-    </BioWrapper>
+    </PageWrapper>
   );
 }
 
