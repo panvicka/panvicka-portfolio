@@ -21,9 +21,15 @@ export const SocialIcon = styled(globalStyles.FlexCol)`
 
   transition: all 0.3s ease-in-out;
 
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   svg {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     color: var(--gray-color);
   }
 
