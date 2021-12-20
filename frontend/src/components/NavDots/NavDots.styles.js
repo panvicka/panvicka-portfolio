@@ -23,20 +23,10 @@ export const NavigationDot = styled.a`
 export const NavigationDotsWrapper = styled(globalStyles.FlexCol)`
   justify-content: center;
   align-items: center;
- 
-
+  border: 1px solid black;
   padding: 1rem;
 
- 
-}
-
-@media screen and (max-width: 500px) {
-  .app__navigation,
-  .app__social {
+  @media screen and (max-width: 500px) {
     display: none;
-  }
-
-  .copyright {
-    padding: 2rem;
   }
 `;

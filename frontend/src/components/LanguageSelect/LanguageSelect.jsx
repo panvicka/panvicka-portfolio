@@ -3,7 +3,7 @@ import Menu, { Item as MenuItem } from "rc-menu";
 import "rc-dropdown/assets/index.css";
 import Dropdown from "rc-dropdown";
 
-import { DropDownButton, LanguageSelectWrapper } from "./LanguageSelect.style";
+import { DropDownButton } from "./LanguageSelect.style";
 import { useLanguage, useLanguageUpdate } from "../../context/LanguageContext";
 
 const stylesMenuItems = {
@@ -15,7 +15,7 @@ const stylesIcon = {
   marginRight: "0.4rem",
 };
 
-const LanguageSelect = () => {
+const LanguageSelect = ({ size }) => {
   const currentLanguage = useLanguage();
   const setLanguage = useLanguageUpdate();
 
@@ -52,17 +52,15 @@ const LanguageSelect = () => {
   );
 
   return (
-    <LanguageSelectWrapper>
-      <Dropdown trigger={["click"]} overlay={menu} animation="slide-up">
-        <DropDownButton>
-          {languages.map((lan) => {
-            if (lan.countryCode == currentLanguage) {
-              return <span key={lan.countryCode} className={`fi fi-${lan.countryCode}`}></span>;
-            }
-          })}
-        </DropDownButton>
-      </Dropdown>
-    </LanguageSelectWrapper>
+    <Dropdown trigger={["click"]} overlay={menu} animation="slide-up">
+      <DropDownButton size={size}>
+        {languages.map((lan) => {
+          if (lan.countryCode == currentLanguage) {
+            return <span key={lan.countryCode} className={`fi fi-${lan.countryCode}`}></span>;
+          }
+        })}
+      </DropDownButton>
+    </Dropdown>
   );
 };
 

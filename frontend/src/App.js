@@ -1,7 +1,7 @@
 import React from "react";
 import { About, Footer, Home, Bio, Skills, Work, Contact } from "./container";
 import { NavBar } from "./components";
-import "./App.scss";
+ 
 import "flag-icons/css/flag-icons.css";
 
 import i18n from "i18next";

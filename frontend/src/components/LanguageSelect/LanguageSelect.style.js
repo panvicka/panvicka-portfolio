@@ -1,18 +1,13 @@
 import styled from "styled-components";
 
-export const LanguageSelectWrapper = styled.div`
-  position: absolute;
-  right: 4%;
-  top: 5%;
-`;
-
 export const DropDownButton = styled.button`
-  width: 35px;
-  height: 35px;
+  width: ${(props) => `${props.size}px`};
+  height: ${(props) => `${props.size}px`};
   border: none;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
+  cursor: pointer;
 
   li {
     width: 200px;
@@ -21,11 +16,10 @@ export const DropDownButton = styled.button`
   span {
     left: 50%;
     // centering absolute positioned element with 50% of heigh/width margin
-    margin-left: -25px;
-    margin-top: -25px;
+    margin-left: ${(props) => `${-(props.size + 20) / 2}px`};
+    margin-top: ${(props) => `${-(props.size + 20) / 2}px`};
     position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
+    width: ${(props) => `${props.size + 20}px`};
+    height: ${(props) => `${props.size + 20}px`};
   }
 `;

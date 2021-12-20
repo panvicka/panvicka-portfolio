@@ -12,6 +12,7 @@ export const PageWrapper = styled.div`
   max-width: 1000px;
   margin: 0 auto;
   padding: 15rem 2rem 0rem 2rem;
+ 
 `;
 
 export const SectionTitle = styled.h2`
