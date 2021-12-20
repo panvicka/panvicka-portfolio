@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import * as globalStyles from "../../../index.styles";
+import React from 'react';
+import styled from 'styled-components';
+import * as globalStyles from '../../../index.styles';
 
 const LanguageSkillWrapper = styled(globalStyles.FlexRowCenter)`
   width: 280px;
@@ -9,15 +9,15 @@ const LanguageSkillWrapper = styled(globalStyles.FlexRowCenter)`
   padding: 0.3rem;
   border-radius: 10px;
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-   img {
+  img {
     height: 70px;
   }
 `;
 
 const LanguageSkillTextPart = styled(globalStyles.FlexCol)`
-padding: 0.5rem;
-padding-left: 1rem;
-` 
+  padding: 0.5rem;
+  padding-left: 1rem;
+`;
 
 const LanguageSkillTitle = styled.h1`
   text-transform: uppercase;

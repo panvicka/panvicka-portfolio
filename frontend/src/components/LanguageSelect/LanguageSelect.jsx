@@ -1,36 +1,37 @@
-import React from "react";
-import Menu, { Item as MenuItem } from "rc-menu";
-import "rc-dropdown/assets/index.css";
-import Dropdown from "rc-dropdown";
+import React from 'react';
 
-import { DropDownButton } from "./LanguageSelect.style";
-import { useLanguage, useLanguageUpdate } from "../../context/LanguageContext";
+import Dropdown from 'rc-dropdown';
+import Menu, { Item as MenuItem } from 'rc-menu';
+import 'rc-dropdown/assets/index.css';
+
+import { useLanguage, useLanguageUpdate } from '../../context/LanguageContext';
+import { DropDownButton } from './LanguageSelect.style';
 
 const stylesMenuItems = {
-  width: "150px",
-  padding: "0.4rem",
+  width: '150px',
+  padding: '0.4rem',
 };
 
 const stylesIcon = {
-  marginRight: "0.4rem",
+  marginRight: '0.4rem',
 };
 
-const LanguageSelect = ({ size }) => {
+function LanguageSelect({ size }) {
   const currentLanguage = useLanguage();
   const setLanguage = useLanguageUpdate();
 
   const languages = [
     {
-      name: "English",
-      countryCode: "gb",
+      name: 'English',
+      countryCode: 'gb',
     },
     {
-      name: "Deutsch",
-      countryCode: "de",
+      name: 'Deutsch',
+      countryCode: 'de',
     },
     {
-      name: "Čeština",
-      countryCode: "cz",
+      name: 'Čeština',
+      countryCode: 'cz',
     },
   ];
 
@@ -40,28 +41,26 @@ const LanguageSelect = ({ size }) => {
 
   const menu = (
     <Menu onSelect={onSelect}>
-      {languages.map(({ name, countryCode }) => {
-        return (
-          <MenuItem key={countryCode} style={stylesMenuItems}>
-            <span style={stylesIcon} className={`fi fi-${countryCode}`}></span>
-            {name}
-          </MenuItem>
-        );
-      })}
+      {languages.map(({ name, countryCode }) => (
+        <MenuItem key={countryCode} style={stylesMenuItems}>
+          <span style={stylesIcon} className={`fi fi-${countryCode}`} />
+          {name}
+        </MenuItem>
+      ))}
     </Menu>
   );
 
   return (
-    <Dropdown trigger={["click"]} overlay={menu} animation="slide-up">
+    <Dropdown trigger={['click']} overlay={menu} animation="slide-up">
       <DropDownButton size={size}>
         {languages.map((lan) => {
-          if (lan.countryCode == currentLanguage) {
-            return <span key={lan.countryCode} className={`fi fi-${lan.countryCode}`}></span>;
+          if (lan.countryCode === currentLanguage) {
+            return <span key={lan.countryCode} className={`fi fi-${lan.countryCode}`} />;
           }
         })}
       </DropDownButton>
     </Dropdown>
   );
-};
+}
 
 export default LanguageSelect;

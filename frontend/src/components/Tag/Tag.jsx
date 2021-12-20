@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import { tagsColors } from "../../constants/tagsColors";
+import { tagsColors } from '../../constants/tagsColors';
 
 const TagElement = styled.div`
   display: inline-block;
@@ -15,7 +15,7 @@ const TagElement = styled.div`
 
 const Tag = ({ text }) => {
   const findColor = (text) => {
-    let tagColor = "white";
+    let tagColor = 'white';
     tagsColors.some((tag) => {
       if (tag.name === text) {
         tagColor = tag.color;

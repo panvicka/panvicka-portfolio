@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import * as globalStyles from "../../index.styles";
+import styled from 'styled-components';
+import * as globalStyles from '../../index.styles';
 
 export const SocialWrapper = styled(globalStyles.FlexRow)`
   justify-content: flex-end;

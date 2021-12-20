@@ -1,11 +1,11 @@
-import React from "react";
-import { DiReact } from "react-icons/di";
+import React from 'react';
+import { DiReact } from 'react-icons/di';
 
-import { BsGithub } from "react-icons/bs";
-import { Socials } from "../../components";
+import { BsGithub } from 'react-icons/bs';
+import { Socials } from '../../components';
 
-import styled from "styled-components";
-import * as globalStyles from "../../index.styles";
+import styled from 'styled-components';
+import * as globalStyles from '../../index.styles';
 
 export const FooterSectionCredits = styled(globalStyles.FlexCol)`
   text-align: right;
@@ -59,7 +59,7 @@ const Footer = () => {
 
   return (
     <FooterWrapper>
-       <Socials />
+      <Socials />
       <FooterSection>
         <FooterGitHubLink href="">
           Check page <BsGithub />
@@ -88,8 +88,6 @@ const Footer = () => {
           Ui icons created by surang
         </a>
       </FooterSectionCredits>
-
-     
     </FooterWrapper>
   );
 };

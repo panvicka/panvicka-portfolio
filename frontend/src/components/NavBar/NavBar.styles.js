@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import * as globalStyles from "../../index.styles";
-import { device } from "../../constants/device";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import * as globalStyles from '../../index.styles';
+import { device } from '../../constants/device';
 
 export const LogoContainer = styled(globalStyles.FlexCol)`
   align-items: center;
@@ -86,7 +86,7 @@ export const MenuContent = styled(motion.div)`
       margin: 1.4rem;
       padding: 0.3em;
       width: 100%;
-      text-align:center;
+      text-align: center;
       border: 1px solid green;
     }
   }
@@ -106,7 +106,7 @@ export const MenuContent = styled(motion.div)`
   }
 `;
 
-export const NavLinks = styled(globalStyles.FlexRow).attrs({ as: "ul" })`
+export const NavLinks = styled(globalStyles.FlexRow).attrs({ as: 'ul' })`
   flex: 1;
   list-style: none;
 
@@ -149,7 +149,7 @@ export const NavLinks = styled(globalStyles.FlexRow).attrs({ as: "ul" })`
   }
 `;
 
-export const Navbar = styled(globalStyles.FlexRowCenter).attrs({ as: "nav" })`
+export const Navbar = styled(globalStyles.FlexRowCenter).attrs({ as: 'nav' })`
   width: 100%;
   border: 1px solid blue;
   padding: 1.2rem 0;

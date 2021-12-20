@@ -1,15 +1,15 @@
-import React, { useState, createRef, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import emailjs from "emailjs-com";
-import { init } from "@emailjs/browser";
-import { useForm } from "react-hook-form";
-import { ErrorMessage } from "@hookform/error-message";
-import ReCAPTCHA from "react-google-recaptcha";
+import React, { useState, createRef, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import emailjs from 'emailjs-com';
+import { init } from '@emailjs/browser';
+import { useForm } from 'react-hook-form';
+import { ErrorMessage } from '@hookform/error-message';
+import ReCAPTCHA from 'react-google-recaptcha';
 
-import { AppWrapper } from "../../wrapper";
+import { AppWrapper } from '../../wrapper';
 
-import { Form, InputWrapper } from "./Contact.styles";
-import { PageWrapper, SectionTitle } from "../../index.styles";
+import { Form, InputWrapper } from './Contact.styles';
+import { PageWrapper, SectionTitle } from '../../index.styles';
 
 init(process.env.REACT_APP_EMAILJS_USER_ID);
 
@@ -26,7 +26,7 @@ const Contact = () => {
     const recaptchaValue = recaptchaRef.current.getValue();
 
     console.log(`capcha on reload ${recaptchaValue}`);
-    if (recaptchaValue != "") {
+    if (recaptchaValue != '') {
       setValidCaptcha(true);
     } else {
       setValidCaptcha(false);
@@ -37,7 +37,7 @@ const Contact = () => {
   function onChange(e) {
     console.log(`capcha change`);
     const recaptchaValue = recaptchaRef.current.getValue();
-    if (recaptchaValue != "") {
+    if (recaptchaValue != '') {
       setValidCaptcha(true);
       console.log(`is my capcha invalid valid ${validCaptcha}`);
     } else {
@@ -83,14 +83,19 @@ const Contact = () => {
 
   return (
     <PageWrapper column>
-      <SectionTitle>{t("tra-contact")}</SectionTitle>
+      <SectionTitle>{t('tra-contact')}</SectionTitle>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <InputWrapper>
-          <label htmlFor="nameInput">{t("tra-name")}</label>
-          <input id="nameInput" type="text" placeholder="Joe" {...register("name", { required: "tra-required" })} />
+          <label htmlFor="nameInput">{t('tra-name')}</label>
+          <input
+            id="nameInput"
+            type="text"
+            placeholder="Joe"
+            {...register('name', { required: 'tra-required' })}
+          />
 
           {/* placeholder for the real error message to prevent content jumping and using absolute positioned elements */}
-          <div className={`${errors.name ? "hidden" : "error-field"}`}></div>
+          <div className={`${errors.name ? 'hidden' : 'error-field'}`}></div>
           <ErrorMessage
             errors={errors}
             name="name"
@@ -99,22 +104,22 @@ const Contact = () => {
         </InputWrapper>
 
         <InputWrapper>
-          <label htmlFor="inputEmail">{t("tra-email")}</label>
+          <label htmlFor="inputEmail">{t('tra-email')}</label>
           <input
             id="inputEmail"
             type="email"
             placeholder="joe@doe.com"
-            {...register("email", {
-              required: "tra-required",
+            {...register('email', {
+              required: 'tra-required',
               pattern: {
                 value:
                   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,
-                message: "tra-wrong-format",
+                message: 'tra-wrong-format',
               },
             })}
           />
           {/* placeholder for the real error message to prevent content jumping and using absolute positioned elements */}
-          <div className={`${errors.email ? "hidden" : "error-field"}`}></div>
+          <div className={`${errors.email ? 'hidden' : 'error-field'}`}></div>
           <ErrorMessage
             errors={errors}
             name="email"
@@ -123,15 +128,15 @@ const Contact = () => {
         </InputWrapper>
 
         <InputWrapper>
-          <label htmlFor="inputText"> {t("tra-message-text")}</label>
+          <label htmlFor="inputText"> {t('tra-message-text')}</label>
           <textarea
             id="inputText"
             placeholder="..."
-            {...register("message", { required: "tra-required", maxLength: 1000 })}
+            {...register('message', { required: 'tra-required', maxLength: 1000 })}
           />
 
           {/* placeholder for the real error message to prevent content jumping and using absolute positioned elements */}
-          <div className={`${errors.message ? "hidden" : "error-field"}`}></div>
+          <div className={`${errors.message ? 'hidden' : 'error-field'}`}></div>
           <ErrorMessage
             errors={errors}
             name="message"
@@ -139,18 +144,22 @@ const Contact = () => {
           />
         </InputWrapper>
 
-        <ReCAPTCHA sitekey={process.env.REACT_APP_CAPTCHA_SITE_KEY} onChange={onChange} ref={recaptchaRef} />
+        <ReCAPTCHA
+          sitekey={process.env.REACT_APP_CAPTCHA_SITE_KEY}
+          onChange={onChange}
+          ref={recaptchaRef}
+        />
 
         <button disabled={!validCaptcha} type="submit">
-          {t("tra-send")}
+          {t('tra-send')}
         </button>
       </Form>
 
-      {emailSent && <p class="info success"> {t("tra-thank-you-message")}</p>}
-      {emailSending && <p class="info"> {t("tra-message-send")}</p>}
-      {emailSendingError && <p class="info"> {t("tra-message-error")}</p>}
+      {emailSent && <p class="info success"> {t('tra-thank-you-message')}</p>}
+      {emailSending && <p class="info"> {t('tra-message-send')}</p>}
+      {emailSendingError && <p class="info"> {t('tra-message-error')}</p>}
     </PageWrapper>
   );
 };
 
-export default AppWrapper(Contact, "contact");
+export default AppWrapper(Contact, 'contact');

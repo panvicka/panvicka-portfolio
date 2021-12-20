@@ -1,1 +1,1 @@
-export const menuArray = ["home", "about", "skills", "work", "bio", "contact"];
+export const menuArray = ['home', 'about', 'skills', 'work', 'bio', 'contact'];

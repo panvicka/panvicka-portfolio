@@ -1,16 +1,23 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
-import { urlFor, client } from "../../clients";
-import { AppWrapper } from "../../wrapper";
-import { images } from "../../constants";
-import Tag from "../../components/Tag/Tag";
+import { urlFor, client } from '../../clients';
+import { AppWrapper } from '../../wrapper';
+import { images } from '../../constants';
+import Tag from '../../components/Tag/Tag';
 
-import { WorkContentWrapper, WorkItem, WorkHeader, WorkItemWrapper, WorkImage, WorkTags } from "./Work.styles";
+import {
+  WorkContentWrapper,
+  WorkItem,
+  WorkHeader,
+  WorkItemWrapper,
+  WorkImage,
+  WorkTags,
+} from './Work.styles';
 
-import { SectionTitle, SectionSubTitle, PageWrapper } from "../../index.styles";
-import { useLanguage, useLanguageUpdate } from "../../context/LanguageContext";
+import { SectionTitle, SectionSubTitle, PageWrapper } from '../../index.styles';
+import { useLanguage, useLanguageUpdate } from '../../context/LanguageContext';
 
 const Work = () => {
   const [work, setWork] = useState([]);
@@ -35,8 +42,8 @@ const Work = () => {
       opacity: 1,
       transition: {
         duration: 0.2,
-        type: "tween",
-        ease: "easeIn",
+        type: 'tween',
+        ease: 'easeIn',
       },
     },
     hover: {
@@ -44,20 +51,26 @@ const Work = () => {
       opacity: 0,
       transition: {
         duration: 0.2,
-        type: "tween",
-        ease: "easeOut",
+        type: 'tween',
+        ease: 'easeOut',
       },
     },
   };
 
   return (
     <PageWrapper column>
-      <SectionTitle>{t("Work")}</SectionTitle>
+      <SectionTitle>{t('Work')}</SectionTitle>
 
       <WorkItemWrapper>
         {work.map((workItem) => {
           return (
-            <WorkItem key={workItem._id} as={motion.div} whileHover="hover" initial="rest" animate="rest">
+            <WorkItem
+              key={workItem._id}
+              as={motion.div}
+              whileHover="hover"
+              initial="rest"
+              animate="rest"
+            >
               <WorkHeader>{workItem.name[currentLanguage]}</WorkHeader>
               {workItem.link && (
                 <button>
@@ -82,4 +95,4 @@ const Work = () => {
   );
 };
 
-export default AppWrapper(Work, "work");
+export default AppWrapper(Work, 'work');

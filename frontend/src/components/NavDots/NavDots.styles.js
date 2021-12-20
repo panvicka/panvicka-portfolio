@@ -1,11 +1,11 @@
-import styled from "styled-components";
-import * as globalStyles from "../../index.styles";
+import styled from 'styled-components';
+import * as globalStyles from '../../index.styles';
 
 export const NavigationDot = styled.a`
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: ${(props) => (props.activated ? "blue" : "white")};
+  background-color: ${(props) => (props.activated ? 'blue' : 'white')};
   margin: 0.5rem;
 
   transition: background-color 0.2s ease-in-out;

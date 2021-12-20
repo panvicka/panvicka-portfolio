@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import * as globalStyles from "../../index.styles";
+import styled from 'styled-components';
+import * as globalStyles from '../../index.styles';
 
 export const HeroWrapper = styled(globalStyles.FlexRow)`
   flex: 1;
@@ -9,9 +9,8 @@ export const HeroWrapper = styled(globalStyles.FlexRow)`
   width: 80%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 6rem 2rem 0 ;
+  padding: 6rem 2rem 0;
   border: 2px solid red;
-  
 `;
 
 export const HeroText = styled(globalStyles.FlexCol)`

@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import { BsTwitter, BsGithub, BsLinkedin, BsStackOverflow } from "react-icons/bs";
-import { ImCodepen } from "react-icons/im";
+import { BsTwitter, BsGithub, BsLinkedin, BsStackOverflow } from 'react-icons/bs';
+import { ImCodepen } from 'react-icons/im';
 
-import { SocialWrapper, SocialIcon } from "./Socials.styles";
+import { SocialWrapper, SocialIcon } from './Socials.styles';
 
 const Socials = () => {
   return (

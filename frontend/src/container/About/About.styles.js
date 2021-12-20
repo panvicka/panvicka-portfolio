@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import * as globalStyles from "../../index.styles";
+import styled from 'styled-components';
+import * as globalStyles from '../../index.styles';
 
 export const AboutYears = styled(globalStyles.FlexRowCenter)`
   position: absolute;

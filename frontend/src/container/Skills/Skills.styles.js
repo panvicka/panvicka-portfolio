@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import * as globalStyles from "../../index.styles";
+import styled from 'styled-components';
+import * as globalStyles from '../../index.styles';
 
 export const SkillsContentWrapper = styled(globalStyles.FlexCol)`
   border: 3px solid green;
@@ -38,7 +38,6 @@ export const Skill = styled(globalStyles.FlexColCenter)`
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
   img {
     height: 70px;
-    
   }
 `;
 

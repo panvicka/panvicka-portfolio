@@ -1,5 +1,5 @@
-import React, { useContext, useState, useEffect } from "react";
-import i18n from "i18next";
+import React, { useContext, useState, useEffect } from 'react';
+import i18n from 'i18next';
 
 const LanguageContext = React.createContext();
 const LanguageContextUpdate = React.createContext();
@@ -13,7 +13,7 @@ export function useLanguageUpdate() {
 }
 
 export default function LanguageProvider({ children }) {
-  const [currentLanguage, setCurrentLanguage] = useState("en");
+  const [currentLanguage, setCurrentLanguage] = useState('en');
 
   useEffect(() => {
     setTimeout(() => {
@@ -29,7 +29,9 @@ export default function LanguageProvider({ children }) {
 
   return (
     <LanguageContext.Provider value={currentLanguage}>
-      <LanguageContextUpdate.Provider value={setNewLanguage}>{children}</LanguageContextUpdate.Provider>
+      <LanguageContextUpdate.Provider value={setNewLanguage}>
+        {children}
+      </LanguageContextUpdate.Provider>
     </LanguageContext.Provider>
   );
 }

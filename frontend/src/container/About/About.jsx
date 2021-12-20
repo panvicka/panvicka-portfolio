@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { urlFor, client } from "../../clients";
-import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from 'react';
+import { urlFor, client } from '../../clients';
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 
-import { AppWrapper } from "../../wrapper";
-import { useLanguage } from "../../context/LanguageContext";
+import { AppWrapper } from '../../wrapper';
+import { useLanguage } from '../../context/LanguageContext';
 import {
   AboutContentItem,
   AboutContentItemWrapper,
   AboutYears,
   AboutContentHeader,
   AboutContentInfo,
-} from "./About.styles";
-import { PageWrapper, SectionTitle } from "../../index.styles";
+} from './About.styles';
+import { PageWrapper, SectionTitle } from '../../index.styles';
 
 const About = () => {
   const { t } = useTranslation();
@@ -32,7 +32,7 @@ const About = () => {
 
   return (
     <PageWrapper column>
-      <SectionTitle>{t("About")}</SectionTitle>
+      <SectionTitle>{t('About')}</SectionTitle>
 
       <AboutContentItemWrapper>
         {about.map((aboutItem, index) => {
@@ -59,4 +59,4 @@ const About = () => {
   );
 };
 
-export default AppWrapper(About, "about");
+export default AppWrapper(About, 'about');

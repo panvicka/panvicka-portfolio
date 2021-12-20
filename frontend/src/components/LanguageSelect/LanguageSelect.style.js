@@ -1,4 +1,5 @@
-import styled from "styled-components";
+/* eslint-disable import/prefer-default-export */
+import styled from 'styled-components';
 
 export const DropDownButton = styled.button`
   width: ${(props) => `${props.size}px`};

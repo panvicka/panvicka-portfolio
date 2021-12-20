@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import ReactTooltip from "react-tooltip";
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import ReactTooltip from 'react-tooltip';
 
-import { urlFor, client } from "../../clients";
-import { AppWrapper } from "../../wrapper";
-import { images } from "../../constants";
+import { urlFor, client } from '../../clients';
+import { AppWrapper } from '../../wrapper';
+import { images } from '../../constants';
 
-import { SectionTitle, SectionSubTitle, PageWrapper } from "../../index.styles";
-import { useLanguage, useLanguageUpdate } from "../../context/LanguageContext";
+import { SectionTitle, SectionSubTitle, PageWrapper } from '../../index.styles';
+import { useLanguage, useLanguageUpdate } from '../../context/LanguageContext';
 
 import {
   SkillsContentWrapper,
@@ -16,8 +16,8 @@ import {
   SkillsSectionWrapper,
   SkillsSection,
   SkillWrapper,
-} from "./Skills.styles";
-import LanguageSkill from "./LanguageSkill/LanguageSkill";
+} from './Skills.styles';
+import LanguageSkill from './LanguageSkill/LanguageSkill';
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
@@ -47,11 +47,15 @@ const Skills = () => {
     <PageWrapper column>
       <SectionTitle>Skills</SectionTitle>
       <SkillsSectionWrapper>
-        <SkillsSection as={motion.div} transition={{ duration: 0.5 }} whileInView={{ x: [-100, 0], opacity: [0, 1] }}>
+        <SkillsSection
+          as={motion.div}
+          transition={{ duration: 0.5 }}
+          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        >
           <SectionSubTitle>web developement</SectionSubTitle>
           <SkillWrapper>
             {skills.map((skill, index) => {
-              if (skill.type === "web") {
+              if (skill.type === 'web') {
                 return (
                   <Skill key={index}>
                     <img src={urlFor(skill.icon)} />
@@ -71,7 +75,7 @@ const Skills = () => {
           <SectionSubTitle>embedded</SectionSubTitle>
           <SkillWrapper>
             {skills.map((skill, index) => {
-              if (skill.type === "embedded") {
+              if (skill.type === 'embedded') {
                 return (
                   <Skill key={index}>
                     <img src={urlFor(skill.icon)} />
@@ -105,4 +109,4 @@ const Skills = () => {
   );
 };
 
-export default AppWrapper(Skills, "skills");
+export default AppWrapper(Skills, 'skills');

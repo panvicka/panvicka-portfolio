@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import { NavDots } from "../components";
+import { NavDots } from '../components';
 
 const WrapperDiv = styled.div`
   display: flex;
