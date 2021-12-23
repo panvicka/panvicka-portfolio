@@ -1,4 +1,4 @@
-export const tagsColors = [
+const tagsColors = [
   {
     name: 'C',
     color: 'blue',
@@ -56,3 +56,5 @@ export const tagsColors = [
     color: 'grey',
   },
 ];
+
+export default tagsColors;

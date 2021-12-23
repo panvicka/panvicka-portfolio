@@ -1,15 +1,15 @@
 import React from 'react';
+
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
+import { Socials } from '../../components';
+import { images } from '../../constants';
+import { PageWrapper } from '../../index.styles';
 import { AppWrapper } from '../../wrapper';
 import { HeroText, HeroImage } from './Home.styles';
-import { images } from '../../constants';
-import { Socials } from '../../components';
 
-import { PageWrapper } from '../../index.styles';
-
-const Home = () => {
+function Home() {
   const { t } = useTranslation();
 
   return (
@@ -21,17 +21,17 @@ const Home = () => {
       >
         <p>{t('Hello-I-am')}</p>
         <h1>Eliška Veisová</h1>
-        <p>embedded HW/SW engineer for 5 years</p>
-        <p>learning full-stack web development</p>
+        <p>{t('tra-embedded')}</p>
+        <p>{t('tra-webdev')}</p>
       </HeroText>
 
       <HeroImage>
-        <img src={images.profile_pic} alt="profile"></img>
+        <img src={images.profilePic} alt="women with grey shirt, glasses, brown hair, smiling" />
       </HeroImage>
 
       <Socials />
     </PageWrapper>
   );
-};
+}
 
 export default AppWrapper(Home, 'home');

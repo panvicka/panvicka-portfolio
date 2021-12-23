@@ -1,19 +1,20 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { useState, createRef, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import emailjs from 'emailjs-com';
+
 import { init } from '@emailjs/browser';
-import { useForm } from 'react-hook-form';
 import { ErrorMessage } from '@hookform/error-message';
+import emailjs from 'emailjs-com';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
-import { AppWrapper } from '../../wrapper';
-
-import { Form, InputWrapper } from './Contact.styles';
 import { PageWrapper, SectionTitle } from '../../index.styles';
+import { AppWrapper } from '../../wrapper';
+import { Form, InputWrapper } from './Contact.styles';
 
 init(process.env.REACT_APP_EMAILJS_USER_ID);
 
-const Contact = () => {
+function Contact() {
   const { t } = useTranslation();
   const recaptchaRef = createRef();
 
@@ -26,7 +27,7 @@ const Contact = () => {
     const recaptchaValue = recaptchaRef.current.getValue();
 
     console.log(`capcha on reload ${recaptchaValue}`);
-    if (recaptchaValue != '') {
+    if (recaptchaValue !== '') {
       setValidCaptcha(true);
     } else {
       setValidCaptcha(false);
@@ -34,10 +35,10 @@ const Contact = () => {
     console.log(`my valid capcha ${validCaptcha}`);
   }, []);
 
-  function onChange(e) {
+  function onChange() {
     console.log(`capcha change`);
     const recaptchaValue = recaptchaRef.current.getValue();
-    if (recaptchaValue != '') {
+    if (recaptchaValue !== '') {
       setValidCaptcha(true);
       console.log(`is my capcha invalid valid ${validCaptcha}`);
     } else {
@@ -68,7 +69,7 @@ const Contact = () => {
     setEmailSending(true);
 
     emailjs.send(serviceId, templateId, templateParams, userId).then((response) => {
-      if (response.status == 200) {
+      if (response.status === 200) {
         setEmailSending(false);
         setEmailSent(true);
         setEmailSendingError(false);
@@ -95,7 +96,7 @@ const Contact = () => {
           />
 
           {/* placeholder for the real error message to prevent content jumping and using absolute positioned elements */}
-          <div className={`${errors.name ? 'hidden' : 'error-field'}`}></div>
+          <div className={`${errors.name ? 'hidden' : 'error-field'}`} />
           <ErrorMessage
             errors={errors}
             name="name"
@@ -119,7 +120,7 @@ const Contact = () => {
             })}
           />
           {/* placeholder for the real error message to prevent content jumping and using absolute positioned elements */}
-          <div className={`${errors.email ? 'hidden' : 'error-field'}`}></div>
+          <div className={`${errors.email ? 'hidden' : 'error-field'}`} />
           <ErrorMessage
             errors={errors}
             name="email"
@@ -136,7 +137,7 @@ const Contact = () => {
           />
 
           {/* placeholder for the real error message to prevent content jumping and using absolute positioned elements */}
-          <div className={`${errors.message ? 'hidden' : 'error-field'}`}></div>
+          <div className={`${errors.message ? 'hidden' : 'error-field'}`} />
           <ErrorMessage
             errors={errors}
             name="message"
@@ -155,11 +156,11 @@ const Contact = () => {
         </button>
       </Form>
 
-      {emailSent && <p class="info success"> {t('tra-thank-you-message')}</p>}
-      {emailSending && <p class="info"> {t('tra-message-send')}</p>}
-      {emailSendingError && <p class="info"> {t('tra-message-error')}</p>}
+      {emailSent && <p className="info success"> {t('tra-thank-you-message')}</p>}
+      {emailSending && <p className="info"> {t('tra-message-send')}</p>}
+      {emailSendingError && <p className="info"> {t('tra-message-error')}</p>}
     </PageWrapper>
   );
-};
+}
 
 export default AppWrapper(Contact, 'contact');

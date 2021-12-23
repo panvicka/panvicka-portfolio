@@ -1,10 +1,10 @@
 import React from 'react';
-import { DiReact } from 'react-icons/di';
 
 import { BsGithub } from 'react-icons/bs';
-import { Socials } from '../../components';
-
+import { DiReact } from 'react-icons/di';
 import styled from 'styled-components';
+
+import { Socials } from '../../components';
 import * as globalStyles from '../../index.styles';
 
 export const FooterSectionCredits = styled(globalStyles.FlexCol)`
@@ -54,8 +54,8 @@ export const FooterGitHubLink = styled.a`
   }
 `;
 
-const Footer = () => {
-  var year = new Date().getFullYear();
+function Footer() {
+  const year = new Date().getFullYear();
 
   return (
     <FooterWrapper>
@@ -90,6 +90,6 @@ const Footer = () => {
       </FooterSectionCredits>
     </FooterWrapper>
   );
-};
+}
 
 export default Footer;

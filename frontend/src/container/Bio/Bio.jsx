@@ -1,10 +1,11 @@
 import React from 'react';
-import { AppWrapper } from '../../wrapper';
+
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 import { SectionTitle, PageWrapper } from '../../index.styles';
+import { AppWrapper } from '../../wrapper';
 import { BlockElement, BioContentWrapper } from './Bio.styles';
-import { useTranslation } from 'react-i18next';
 
 const bioInfo = [
   {
@@ -57,7 +58,7 @@ const bioInfo = [
 function Block({ prompt, reply }) {
   const { t } = useTranslation();
 
-  let words = reply.split(';');
+  const words = reply.split(';');
 
   return (
     <BlockElement>
@@ -74,9 +75,9 @@ function Block({ prompt, reply }) {
         whileInView={{ x: [+200, 0], opacity: [0.8, 1] }}
         className="reply"
       >
-        {words.map((rep) => {
-          return <p>{t(rep)}</p>;
-        })}
+        {words.map((rep) => (
+          <p>{t(rep)}</p>
+        ))}
       </motion.div>
     </BlockElement>
   );
@@ -92,9 +93,9 @@ function Bio() {
       {/* <p>{t("tra-bio-text")}</p> */}
 
       <BioContentWrapper>
-        {bioInfo.map((info, index) => {
-          return <Block key={index} prompt={info.prompt} reply={info.reply}></Block>;
-        })}
+        {bioInfo.map((info) => (
+          <Block key={info.prompt} prompt={info.prompt} reply={info.reply} />
+        ))}
       </BioContentWrapper>
     </PageWrapper>
   );

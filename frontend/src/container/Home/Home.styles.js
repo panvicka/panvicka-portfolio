@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import * as globalStyles from '../../index.styles';
 
 export const HeroWrapper = styled(globalStyles.FlexRow)`

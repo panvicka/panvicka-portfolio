@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import * as globalStyles from '../../index.styles';
 
 export const NavigationDot = styled.a`

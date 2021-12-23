@@ -57,6 +57,7 @@ function LanguageSelect({ size }) {
           if (lan.countryCode === currentLanguage) {
             return <span key={lan.countryCode} className={`fi fi-${lan.countryCode}`} />;
           }
+          return '';
         })}
       </DropDownButton>
     </Dropdown>

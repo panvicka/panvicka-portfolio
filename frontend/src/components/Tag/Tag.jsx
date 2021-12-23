@@ -1,7 +1,8 @@
 import React from 'react';
+
 import styled from 'styled-components';
 
-import { tagsColors } from '../../constants/tagsColors';
+import tagsColors from '../../constants/tagsColors';
 
 const TagElement = styled.div`
   display: inline-block;
@@ -13,20 +14,20 @@ const TagElement = styled.div`
   margin: 0.1rem 0.3rem;
 `;
 
-const Tag = ({ text }) => {
-  const findColor = (text) => {
+function Tag({ text }) {
+  const findColor = (item) => {
     let tagColor = 'white';
     tagsColors.some((tag) => {
-      if (tag.name === text) {
+      if (tag.name === item) {
         tagColor = tag.color;
-        return;
       }
+      return '';
     });
 
     return tagColor;
   };
 
   return <TagElement background={findColor(text)}>{text}</TagElement>;
-};
+}
 
 export default Tag;

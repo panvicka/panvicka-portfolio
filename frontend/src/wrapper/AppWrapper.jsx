@@ -1,4 +1,5 @@
 import React from 'react';
+
 import styled from 'styled-components';
 
 import { NavDots } from '../components';
@@ -12,14 +13,11 @@ const WrapperDiv = styled.div`
   border: 5px dotted pink;
 `;
 
-const AppWrapper = (Component, idName, classNames) =>
+const AppWrapper = (Component, idName) =>
   function HOC() {
     return (
       <WrapperDiv id={idName}>
-        {/* <Socials /> */}
-
         <Component />
-
         <NavDots active={idName} />
       </WrapperDiv>
     );

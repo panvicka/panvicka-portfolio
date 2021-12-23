@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import * as globalStyles from '../../index.styles';
 
 export const SkillsContentWrapper = styled(globalStyles.FlexCol)`
@@ -20,7 +21,6 @@ export const SkillsSectionWrapper = styled(globalStyles.FlexRowCenter)`
 
 export const SkillsSection = styled(globalStyles.FlexCol)`
   max-width: 50%;
-  /* background-image: url(${(props) => props.background}); */
   background-size: cover;
   background-repeat: none;
 

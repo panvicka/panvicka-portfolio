@@ -1,29 +1,24 @@
 import React, { useState, useEffect } from 'react';
+
 import { motion } from 'framer-motion';
-import ReactTooltip from 'react-tooltip';
+import { useTranslation } from 'react-i18next';
 
 import { urlFor, client } from '../../clients';
-import { AppWrapper } from '../../wrapper';
 import { images } from '../../constants';
-
 import { SectionTitle, SectionSubTitle, PageWrapper } from '../../index.styles';
-import { useLanguage, useLanguageUpdate } from '../../context/LanguageContext';
-
+import { AppWrapper } from '../../wrapper';
 import {
-  SkillsContentWrapper,
   Skill,
   SkillHeader,
   SkillsSectionWrapper,
   SkillsSection,
   SkillWrapper,
 } from './Skills.styles';
-import LanguageSkill from './LanguageSkill/LanguageSkill';
 
-const Skills = () => {
+function Skills() {
+  const { t } = useTranslation();
+
   const [skills, setSkills] = useState([]);
-  const [languageSkills, setLanguageSkills] = useState([]);
-
-  const currentLanguage = useLanguage();
 
   useEffect(() => {
     const query = '*[_type == "skills"]';
@@ -33,36 +28,29 @@ const Skills = () => {
       console.log(data);
       setSkills(data);
     });
-
-    const queryLanguages = '*[_type == "languages"]';
-
-    client.fetch(queryLanguages).then((data) => {
-      console.log(`sanity languages fetching, data`);
-      console.log(data);
-      setLanguageSkills(data);
-    });
   }, []);
 
   return (
     <PageWrapper column>
-      <SectionTitle>Skills</SectionTitle>
+      <SectionTitle>{t('tra-skills')}</SectionTitle>
       <SkillsSectionWrapper>
         <SkillsSection
           as={motion.div}
           transition={{ duration: 0.5 }}
           whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         >
-          <SectionSubTitle>web developement</SectionSubTitle>
+          <SectionSubTitle>{t('tra-skills-web')}</SectionSubTitle>
           <SkillWrapper>
-            {skills.map((skill, index) => {
+            {skills.map((skill) => {
               if (skill.type === 'web') {
                 return (
-                  <Skill key={index}>
-                    <img src={urlFor(skill.icon)} />
+                  <Skill key={skill._id}>
+                    <img src={urlFor(skill.icon)} alt={`logo of ${skill.name}`} />
                     <SkillHeader>{skill.name}</SkillHeader>
                   </Skill>
                 );
               }
+              return '';
             })}
           </SkillWrapper>
         </SkillsSection>
@@ -72,41 +60,24 @@ const Skills = () => {
           transition={{ duration: 0.5 }}
           whileInView={{ x: [100, 0], opacity: [0, 1] }}
         >
-          <SectionSubTitle>embedded</SectionSubTitle>
+          <SectionSubTitle>{t('tra-skills-embedded')}</SectionSubTitle>
           <SkillWrapper>
-            {skills.map((skill, index) => {
+            {skills.map((skill) => {
               if (skill.type === 'embedded') {
                 return (
-                  <Skill key={index}>
-                    <img src={urlFor(skill.icon)} />
+                  <Skill key={skill.id}>
+                    <img src={urlFor(skill.icon)} alt={`logo of ${skill.name}`} />
                     <SkillHeader>{skill.name}</SkillHeader>
                   </Skill>
                 );
               }
+              return '';
             })}
           </SkillWrapper>
         </SkillsSection>
       </SkillsSectionWrapper>
-
-      {/* <SkillsSectionWrapper
-        as={motion.div}
-        transition={{ duration: 0.5 }}
-        whileInView={{ y: [100, 0], opacity: [0, 1] }}
-      >
-        {languageSkills.map((lang, index) => {
-          return (
-            <LanguageSkill
-              key={index}
-              language={lang.language[currentLanguage]}
-              icon={urlFor(lang.icon)}
-              level={lang.level}
-              info={lang.info[currentLanguage]}
-            />
-          );
-        })}
-      </SkillsSectionWrapper> */}
     </PageWrapper>
   );
-};
+}
 
 export default AppWrapper(Skills, 'skills');

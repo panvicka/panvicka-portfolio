@@ -1,14 +1,14 @@
 import React from 'react';
-import { About, Footer, Home, Bio, Skills, Work, Contact } from './container';
-import { NavBar } from './components';
 
 import 'flag-icons/css/flag-icons.css';
 
 import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
+import { initReactI18next } from 'react-i18next';
 
+import { NavBar } from './components';
+import { About, Footer, Home, Bio, Skills, Work, Contact } from './container';
 import LanguageProvider from './context/LanguageContext';
 
 i18n
@@ -36,7 +36,7 @@ i18n
     },
   });
 
-const App = () => {
+function App() {
   return (
     <div className="app">
       <LanguageProvider>
@@ -51,6 +51,6 @@ const App = () => {
       </LanguageProvider>
     </div>
   );
-};
+}
 
 export default App;

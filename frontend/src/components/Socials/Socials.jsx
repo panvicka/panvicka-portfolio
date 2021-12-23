@@ -5,11 +5,11 @@ import { ImCodepen } from 'react-icons/im';
 
 import { SocialWrapper, SocialIcon } from './Socials.styles';
 
-const Socials = () => {
+function Socials() {
   return (
     <SocialWrapper>
       <SocialIcon>
-        <a href="">
+        <a href="https://www.linkedin.com/">
           <BsLinkedin />
         </a>
       </SocialIcon>
@@ -35,6 +35,6 @@ const Socials = () => {
       </SocialIcon>
     </SocialWrapper>
   );
-};
+}
 
 export default Socials;

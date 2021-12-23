@@ -1,7 +1,8 @@
-import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import * as globalStyles from '../../index.styles';
+import styled from 'styled-components';
+
 import { device } from '../../constants/device';
+import * as globalStyles from '../../index.styles';
 
 export const LogoContainer = styled(globalStyles.FlexCol)`
   align-items: center;

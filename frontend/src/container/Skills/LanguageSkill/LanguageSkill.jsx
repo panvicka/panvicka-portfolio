@@ -1,5 +1,7 @@
 import React from 'react';
+
 import styled from 'styled-components';
+
 import * as globalStyles from '../../../index.styles';
 
 const LanguageSkillWrapper = styled(globalStyles.FlexRowCenter)`
@@ -28,10 +30,10 @@ const LanguageSkillTitle = styled.h1`
   }
 `;
 
-const LanguageSkill = ({ language, icon, level, info }) => {
+function LanguageSkill({ language, icon, level, info }) {
   return (
     <LanguageSkillWrapper>
-      <img src={icon} />
+      <img src={icon} alt="" />
       <LanguageSkillTextPart>
         <LanguageSkillTitle>
           {language}
@@ -42,6 +44,6 @@ const LanguageSkill = ({ language, icon, level, info }) => {
       </LanguageSkillTextPart>
     </LanguageSkillWrapper>
   );
-};
+}
 
 export default LanguageSkill;
