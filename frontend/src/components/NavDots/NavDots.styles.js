@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
+import { device } from '../../constants/device';
 import * as globalStyles from '../../index.styles';
 
 export const NavigationDot = styled.a`
-  width: ${(props) => (props.activated ? '15px' : '10px')};
-  height: ${(props) => (props.activated ? '15px' : '10px')};
+  width: ${(props) => (props.activated ? '25px' : '15px')};
+  height: ${(props) => (props.activated ? '25px' : '15px')};
   border-radius: 50%;
   background-color: ${(props) =>
     props.activated ? 'var(--secondary-color)' : 'var(--primary-color)'};
@@ -17,8 +18,8 @@ export const NavigationDot = styled.a`
   }
 
   @media screen and (min-width: 2000px) {
-    width: ${(props) => (props.activated ? '25px' : '20px')};
-    height: ${(props) => (props.activated ? '25px' : '20px')};
+    width: ${(props) => (props.activated ? '35px' : '25px')};
+    height: ${(props) => (props.activated ? '35px' : '25px')};
   }
 `;
 
@@ -26,8 +27,9 @@ export const NavigationDotsWrapper = styled(globalStyles.FlexCol)`
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  display: none;
 
-  @media screen and (max-width: 500px) {
-    display: none;
+  @media ${device.tablet} {
+    display: flex;
   }
 `;

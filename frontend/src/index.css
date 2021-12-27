@@ -13,6 +13,8 @@
   --accent-color: #5db090;
   --primary-color: #3d5056;
   --color-almost-white: whitesmoke;
+
+  --box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
 *,

@@ -129,7 +129,7 @@ export const NavLinks = styled(globalStyles.FlexRow).attrs({ as: 'ul' })`
       text-decoration: none;
       flex-direction: column;
       text-transform: uppercase;
-      font-weight: 400;
+      font-weight: 500;
       transition: all 0.2s ease-in-out;
 
       &:hover {
@@ -152,10 +152,10 @@ export const NavLinks = styled(globalStyles.FlexRow).attrs({ as: 'ul' })`
 
 export const Navbar = styled(globalStyles.FlexRowCenter).attrs({ as: 'nav' })`
   width: 100%;
-  border: 1px solid blue;
   padding: 1.2rem 0;
   position: fixed;
   z-index: 2;
+  box-shadow: var(--box-shadow);
 
   // slightly transparent fallback
   background: rgba(255, 255, 255, 0.8);
@@ -166,6 +166,4 @@ export const Navbar = styled(globalStyles.FlexRowCenter).attrs({ as: 'nav' })`
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
   }
-
-  
 `;

@@ -7,17 +7,17 @@ import { Socials } from '../../components';
 import { images } from '../../constants';
 import { PageWrapper } from '../../index.styles';
 import { AppWrapper } from '../../wrapper';
-import { HeroText, HeroImage } from './Home.styles';
+import { HeroText, HeroImage, SocialWrapper, HeroWrapper } from './Home.styles';
 
 function Home() {
   const { t } = useTranslation();
 
   return (
-    <PageWrapper>
+    <HeroWrapper>
       <HeroText
-      // as={motion.div}
-      // transition={{ duration: 0.5 }}
-      // animate={{ x: [-100, 0], opacity: [0, 1] }}
+        as={motion.div}
+        transition={{ duration: 0.5 }}
+        animate={{ x: [-100, 0], opacity: [0, 1] }}
       >
         <span className="greeting">{t('Hello-I-am')}</span>
         <span className="name"> Eliška Veisová</span>
@@ -36,8 +36,10 @@ function Home() {
         <img src={images.profilePic} alt="women with grey shirt, glasses, brown hair, smiling" />
       </HeroImage>
 
-      <Socials />
-    </PageWrapper>
+      <SocialWrapper>
+        <Socials size={60} />
+      </SocialWrapper>
+    </HeroWrapper>
   );
 }
 

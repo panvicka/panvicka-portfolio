@@ -5,12 +5,8 @@ import { DiReact } from 'react-icons/di';
 import styled from 'styled-components';
 
 import { Socials } from '../../components';
+import { device } from '../../constants/device';
 import * as globalStyles from '../../index.styles';
-
-export const FooterSectionCredits = styled(globalStyles.FlexCol)`
-  text-align: right;
-  font-size: 0.7rem;
-`;
 
 export const FooterSection = styled(globalStyles.FlexColCenter)`
   justify-content: flex-start;
@@ -18,12 +14,20 @@ export const FooterSection = styled(globalStyles.FlexColCenter)`
   small {
     margin-top: 1em;
   }
+
+  margin: 2em 0;
+  border: 2px solid green;
+
+  @media ${device.tablet} {
+  }
 `;
 
-export const FooterWrapper = styled(globalStyles.FlexRow)`
+export const FooterSocialWrapper = styled(globalStyles.FlexRow)``;
+
+export const FooterWrapper = styled(globalStyles.FlexCol)`
   width: 100%;
-  /* border: 3px solid black; */
-  padding: 2rem 15rem;
+  box-shadow: var(--box-shadow);
+  padding: 3rem 15rem;
   align-items: center;
   justify-content: space-around;
   background-color: #ffffff;
@@ -33,11 +37,21 @@ export const FooterWrapper = styled(globalStyles.FlexRow)`
 
   a {
     text-decoration: none;
-    color: #b4499d;
+    color: var(--primary-color);
+    font-weight: bolder;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   svg {
     margin: 0 0.3rem;
+  }
+
+  @media ${device.tablet} {
+    flex-direction: row;
+    align-items: flex-start;
   }
 `;
 
@@ -50,11 +64,21 @@ export const FooterGitHubLink = styled.a`
   text-decoration: none;
   transition: color linear 0.1s;
 
-  &:hover {
-    color: #00000053;
-  }
   svg {
     margin-left: 0.3rem;
+  }
+`;
+
+export const FooterSectionCredits = styled(globalStyles.FlexCol)`
+  text-align: center;
+  font-size: 0.7rem;
+
+  a {
+    font-weight: normal;
+  }
+
+  @media ${device.tablet} {
+    text-align: right;
   }
 `;
 
@@ -63,7 +87,9 @@ function Footer() {
 
   return (
     <FooterWrapper>
-      <Socials />
+      <FooterSocialWrapper>
+        <Socials />
+      </FooterSocialWrapper>
       <FooterSection>
         <FooterGitHubLink href="">
           Check page <BsGithub />

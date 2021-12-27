@@ -2,15 +2,9 @@ import styled from 'styled-components';
 
 import * as globalStyles from '../../index.styles';
 
-export const SocialWrapper = styled(globalStyles.FlexRow)`
-  justify-content: flex-end;
-  align-items: center;
-  padding: 1rem;
-`;
-
-export const SocialIcon = styled(globalStyles.FlexCol)`
-  width: 40px;
-  height: 40px;
+const SocialIcon = styled(globalStyles.FlexCol)`
+  width: ${(props) => `${props.size}px`};
+  height: ${(props) => `${props.size}px`};
   border-radius: 50%;
   background-color: var(--white-color);
   margin: 0.25rem 0.25rem;
@@ -29,8 +23,8 @@ export const SocialIcon = styled(globalStyles.FlexCol)`
   }
 
   svg {
-    width: 20px;
-    height: 20px;
+    width: ${(props) => `${props.size / 2}px`};
+    height: ${(props) => `${props.size / 2}px`};
     color: var(--gray-color);
   }
 
@@ -55,3 +49,5 @@ export const SocialIcon = styled(globalStyles.FlexCol)`
     }
   }
 `;
+
+export default SocialIcon;

@@ -5,13 +5,12 @@ import * as globalStyles from '../../index.styles';
 
 export const AboutYears = styled(globalStyles.FlexRowCenter)`
   position: absolute;
-  background-color: pink;
+  background-color: var(--accent-color);
   top: -30px;
   left: -30px;
   font-size: 2.4em;
   border-radius: 50%;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  border: 1px solid white;
   opacity: 0;
   transform-origin: center;
 
@@ -44,12 +43,24 @@ export const AboutContentInfo = styled.div`
     margin-top: 1.3rem;
   }
 
+  svg {
+    display: block;
+    position: absolute;
+    transform: scale(0.5) rotate(90deg);
+    right: 0px;
+    top: 0px;
+    left: 0;
+    left: 0;
+    opacity: 0.4;
+  }
+
   img {
     display: block;
     max-height: 100px;
     width: auto;
     height: auto;
     margin-right: 1rem;
+    z-index: 0;
   }
 
   @media ${device.mobileL} {

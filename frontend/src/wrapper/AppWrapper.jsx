@@ -10,7 +10,6 @@ const WrapperDiv = styled.div`
   flex: 1;
   min-height: 100%;
   width: 100%;
-  border: 5px dotted pink;
 `;
 
 const AppWrapper = (Component, idName) =>

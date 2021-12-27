@@ -7,10 +7,11 @@ import emailjs from 'emailjs-com';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
+import { BsEnvelope } from 'react-icons/bs';
 
 import { PageWrapper, SectionTitle } from '../../index.styles';
 import { AppWrapper } from '../../wrapper';
-import { Form, InputWrapper } from './Contact.styles';
+import { Form, InputWrapper, ControlWrapper } from './Contact.styles';
 
 init(process.env.REACT_APP_EMAILJS_USER_ID);
 
@@ -145,15 +146,17 @@ function Contact() {
           />
         </InputWrapper>
 
-        <ReCAPTCHA
-          sitekey={process.env.REACT_APP_CAPTCHA_SITE_KEY}
-          onChange={onChange}
-          ref={recaptchaRef}
-        />
+        <ControlWrapper>
+          <ReCAPTCHA
+            sitekey={process.env.REACT_APP_CAPTCHA_SITE_KEY}
+            onChange={onChange}
+            ref={recaptchaRef}
+          />
 
-        <button disabled={!validCaptcha} type="submit">
-          {t('tra-send')}
-        </button>
+          <button disabled={!validCaptcha} type="submit">
+            <BsEnvelope />
+          </button>
+        </ControlWrapper>
       </Form>
 
       {emailSent && <p className="info success"> {t('tra-thank-you-message')}</p>}
