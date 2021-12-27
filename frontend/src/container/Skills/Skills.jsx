@@ -65,7 +65,7 @@ function Skills() {
             {skills.map((skill) => {
               if (skill.type === 'embedded') {
                 return (
-                  <Skill key={skill.id}>
+                  <Skill key={skill._id}>
                     <img src={urlFor(skill.icon)} alt={`logo of ${skill.name}`} />
                     <SkillHeader>{skill.name}</SkillHeader>
                   </Skill>

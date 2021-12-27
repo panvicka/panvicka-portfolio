@@ -33,19 +33,19 @@ const bioInfo = [
     reply: 'Liberec/Bautzen',
   },
   {
-    prompt: '20XX-20XX',
+    prompt: '2001-2010',
     reply: 'tra-bachelor-degree;tra-tul;tra-eirs',
   },
   {
-    prompt: '20XX-20XX',
+    prompt: '2011-2015',
     reply: 'tra-master-degree;tra-tul;tra-mechatronics',
   },
   {
-    prompt: '20XX-20XX',
+    prompt: '2012-2020',
     reply: 'tra-master-degree;tra-hochschule;tra-mechatronics',
   },
   {
-    prompt: '20XX-20XX',
+    prompt: '2016-2022',
     reply: 'tra-work-position;ULT AG, Löbau;tra-work-description',
   },
 
@@ -75,8 +75,9 @@ function Block({ prompt, reply }) {
         whileInView={{ x: [+200, 0], opacity: [0.8, 1] }}
         className="reply"
       >
-        {words.map((rep) => (
-          <p>{t(rep)}</p>
+        {words.map((rep, index) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <p key={index}>{t(rep)}</p>
         ))}
       </motion.div>
     </BlockElement>
@@ -93,8 +94,9 @@ function Bio() {
       {/* <p>{t("tra-bio-text")}</p> */}
 
       <BioContentWrapper>
-        {bioInfo.map((info) => (
-          <Block key={info.prompt} prompt={info.prompt} reply={info.reply} />
+        {bioInfo.map((info, index) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <Block key={index} prompt={info.prompt} reply={info.reply} />
         ))}
       </BioContentWrapper>
     </PageWrapper>

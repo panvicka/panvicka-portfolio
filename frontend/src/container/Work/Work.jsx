@@ -78,8 +78,9 @@ function Work() {
             </WorkImage>
 
             <WorkTags>
-              {workItem.tags.map((tag) => (
-                <Tag key={`tag-${tag._id}`} text={tag} />
+              {workItem.tags.map((tag, index) => (
+                // eslint-disable-next-line react/no-array-index-key
+                <Tag key={`tag-${index}`} text={tag} />
               ))}
             </WorkTags>
           </WorkItem>

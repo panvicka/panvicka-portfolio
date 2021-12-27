@@ -166,4 +166,6 @@ export const Navbar = styled(globalStyles.FlexRowCenter).attrs({ as: 'nav' })`
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
   }
+
+  
 `;

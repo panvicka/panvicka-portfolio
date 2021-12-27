@@ -9,6 +9,7 @@ export const WorkItem = styled(globalStyles.FlexCol)`
   margin: 0.9rem;
   position: relative;
   overflow: hidden;
+  background-color: var(--color-almost-white);
 
   justify-content: space-between;
   align-items: center;

@@ -18,13 +18,21 @@ export const HeroText = styled(globalStyles.FlexCol)`
   width: 30%;
   max-width: 600px;
   min-width: 350px;
-  background-color: var(--white-color);
+  background-color: var(--color-almost-white);
   border-radius: 20px;
   margin-left: 2rem;
   padding: 2rem;
 
-  h1 {
+  span.greeting {
     text-transform: uppercase;
+    font-size: 1.4em;
+    color: var(--color-grey);
+  }
+
+  span.name {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: bold;
   }
 
   p {
@@ -32,4 +40,14 @@ export const HeroText = styled(globalStyles.FlexCol)`
   }
 `;
 
-export const HeroImage = styled(globalStyles.FlexCol)``;
+export const HeroImage = styled(globalStyles.FlexCol)`
+  position: relative;
+
+  svg {
+    position: absolute;
+    z-index: -5;
+    left: -300px;
+    top: -257px;
+    transform: rotate(55deg) ;
+  }
+`;
