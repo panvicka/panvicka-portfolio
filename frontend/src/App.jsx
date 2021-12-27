@@ -5,9 +5,10 @@ import 'flag-icons/css/flag-icons.css';
 import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
+import CookieConsent from 'react-cookie-consent';
 import { initReactI18next } from 'react-i18next';
 
-import { NavBar } from './components';
+import { NavBar, Cookie } from './components';
 import { About, Footer, Home, Bio, Skills, Work, Contact } from './container';
 import LanguageProvider from './context/LanguageContext';
 
@@ -39,6 +40,7 @@ i18n
 function App() {
   return (
     <div className="app">
+      <Cookie />
       <LanguageProvider>
         <NavBar />
         <Home />

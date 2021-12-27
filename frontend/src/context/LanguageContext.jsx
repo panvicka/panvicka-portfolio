@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-constructed-context-values */
 import React, { useContext, useState, useEffect } from 'react';
 
 import i18n from 'i18next';

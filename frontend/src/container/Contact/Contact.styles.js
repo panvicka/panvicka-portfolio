@@ -1,9 +1,18 @@
 import styled from 'styled-components';
 
+import { device } from '../../constants/device';
 import * as globalStyles from '../../index.styles';
 
-export const ControlWrapper = styled(globalStyles.FlexRow)`
+export const ControlWrapper = styled.div`
   width: 100%;
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+
+  @media ${device.tablet} {
+    flex-direction: row;
+  }
 `;
 
 export const Form = styled.form`
@@ -20,6 +29,7 @@ export const Form = styled.form`
     color: var(--color-primary);
     background-color: var(--accent-color);
     width: 100%;
+    min-width: 150px;
     font-size: 1.5em;
     margin: 0.9rem;
     border-radius: 20px;

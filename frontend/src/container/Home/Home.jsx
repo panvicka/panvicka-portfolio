@@ -5,26 +5,45 @@ import { useTranslation } from 'react-i18next';
 
 import { Socials } from '../../components';
 import { images } from '../../constants';
+import { size } from '../../constants/device';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 import { PageWrapper } from '../../index.styles';
 import { AppWrapper } from '../../wrapper';
-import { HeroText, HeroImage, SocialWrapper, HeroWrapper } from './Home.styles';
+import {
+  HeroText,
+  HeroImage,
+  SocialWrapper,
+  HeroWrapper,
+  HeroPhoneContentWrapper,
+} from './Home.styles';
 
 function Home() {
   const { t } = useTranslation();
+  const { width } = useWindowDimensions();
 
   return (
     <HeroWrapper>
-      <HeroText
-        as={motion.div}
-        transition={{ duration: 0.5 }}
-        animate={{ x: [-100, 0], opacity: [0, 1] }}
-      >
-        <span className="greeting">{t('Hello-I-am')}</span>
-        <span className="name"> Eliška Veisová</span>
+      <HeroPhoneContentWrapper>
+        <HeroText
+          as={motion.div}
+          transition={{ duration: 0.5 }}
+          animate={{ x: [-100, 0], opacity: [0, 1] }}
+        >
+          <span className="greeting">{t('Hello-I-am')}</span>
+          <span className="name"> Eliška Veisová</span>
 
-        <p>{t('tra-embedded')}</p>
-        <p>{t('tra-webdev')}</p>
-      </HeroText>
+          <p>{t('tra-embedded')}</p>
+          <p>{t('tra-webdev')}</p>
+        </HeroText>
+
+        {width <= size.tablet ? (
+          <SocialWrapper>
+            <Socials size={60} />
+          </SocialWrapper>
+        ) : (
+          ''
+        )}
+      </HeroPhoneContentWrapper>
 
       <HeroImage>
         <svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
@@ -36,9 +55,13 @@ function Home() {
         <img src={images.profilePic} alt="women with grey shirt, glasses, brown hair, smiling" />
       </HeroImage>
 
-      <SocialWrapper>
-        <Socials size={60} />
-      </SocialWrapper>
+      {width > size.tablet ? (
+        <SocialWrapper>
+          <Socials size={60} />
+        </SocialWrapper>
+      ) : (
+        ''
+      )}
     </HeroWrapper>
   );
 }

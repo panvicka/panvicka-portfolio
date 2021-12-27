@@ -1,35 +1,66 @@
 import styled from 'styled-components';
 
-import { size } from '../../constants/device';
+import { device, size } from '../../constants/device';
 import * as globalStyles from '../../index.styles';
 
-export const SocialWrapper = styled(globalStyles.FlexCol)`
-  justify-content: flex-end;
+export const SocialWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
   padding: 1rem;
+  flex-direction: row;
+
+  @media ${device.tablet} {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 `;
 
 export const HeroWrapper = styled(globalStyles.FlexRow)`
   flex: 1;
   min-width: ${size.mobileS}px;
   min-height: 100%;
-  align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   width: 80%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 15rem 2rem 0 0;
+  padding: 15rem 2rem 0 2rem;
+  flex-direction: column;
+
+  @media ${device.tablet} {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+`;
+
+export const HeroPhoneContentWrapper = styled(globalStyles.FlexColCenter)`
+  padding: 1rem;
+  width: 90%;
+  min-width: ${size.mobileS}px;
+  margin: 0 auto;
+
+  @media ${device.tablet} {
+    flex-direction: row;
+    min-width: none;
+  }
 `;
 
 export const HeroText = styled(globalStyles.FlexCol)`
-  width: 450px;
+  width: 100%;
   max-width: 650px;
-  min-width: 350px;
+  min-width: ${size.mobileS}px;
   background-color: var(--color-almost-white);
   border-radius: 20px;
-  margin-left: 2rem;
+
   padding: 2rem;
   box-shadow: var(--box-shadow);
+
+  @media ${device.mobileL} {
+    width: 450px;
+    margin-left: 0 2rem;
+  }
 
   span.greeting {
     text-transform: uppercase;
