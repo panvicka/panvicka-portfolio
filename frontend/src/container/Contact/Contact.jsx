@@ -27,21 +27,18 @@ function Contact() {
   useEffect(() => {
     const recaptchaValue = recaptchaRef.current.getValue();
 
-    console.log(`capcha on reload ${recaptchaValue}`);
-    if (recaptchaValue !== '') {
-      setValidCaptcha(true);
-    } else {
+    // check recaptcha on reload
+    if (recaptchaValue === null) {
       setValidCaptcha(false);
+    } else {
+      setValidCaptcha(true);
     }
-    console.log(`my valid capcha ${validCaptcha}`);
   }, []);
 
   function onChange() {
-    console.log(`capcha change`);
     const recaptchaValue = recaptchaRef.current.getValue();
     if (recaptchaValue !== '') {
       setValidCaptcha(true);
-      console.log(`is my capcha invalid valid ${validCaptcha}`);
     } else {
       setValidCaptcha(false);
     }
