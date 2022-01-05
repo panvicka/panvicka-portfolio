@@ -5,7 +5,6 @@ import { size } from './constants/device';
 export const PageWrapper = styled.div`
   display: flex;
   flex-direction: ${(props) => (props.column ? 'column' : 'row')};
-  border: 3px solid green;
   flex: 1;
   min-height: 100%;
   align-items: center;
