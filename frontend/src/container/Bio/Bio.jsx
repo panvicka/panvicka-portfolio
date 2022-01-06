@@ -89,8 +89,6 @@ function Bio() {
     <PageWrapper column>
       <SectionTitle>{t('tra-bio')}</SectionTitle>
 
-      {/* <p>{t("tra-bio-text")}</p> */}
-
       <BioInfoWrapper>
         <BioContentWrapper width={40}>
           {bioInfo.map((info, index) => (

@@ -38,8 +38,10 @@ export const AboutContentInfo = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+  min-height: 170px;
+
   p {
-    line-height: 1.3rem;
+    line-height: 1.1rem;
     margin-top: 1.3rem;
   }
 
@@ -73,8 +75,8 @@ export const AboutContentItem = styled(globalStyles.FlexCol)`
   width: 400px;
   min-width: 350px;
   min-height: 200px;
-  margin: 2rem;
-  padding: 2rem;
+  margin: 1.2rem;
+  padding: 1.2rem;
   border-radius: 10px;
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
   background-color: var(--color-almost-white);

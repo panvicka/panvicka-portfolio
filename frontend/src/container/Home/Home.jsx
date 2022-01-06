@@ -7,7 +7,6 @@ import { Socials } from '../../components';
 import { images } from '../../constants';
 import { size } from '../../constants/device';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
-import { PageWrapper } from '../../index.styles';
 import { AppWrapper } from '../../wrapper';
 import {
   HeroText,
@@ -29,7 +28,7 @@ function Home() {
           transition={{ duration: 0.5 }}
           animate={{ x: [-100, 0], opacity: [0, 1] }}
         >
-          <span className="greeting">{t('Hello-I-am')}</span>
+          <span className="greeting">{t('tra-hello')}</span>
           <span className="name"> Eliška Veisová</span>
 
           <p>{t('tra-embedded')}</p>

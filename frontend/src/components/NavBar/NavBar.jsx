@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { HiMenu, HiX } from 'react-icons/hi';
 
 import { images } from '../../constants';
@@ -18,6 +19,8 @@ import {
 } from './NavBar.styles';
 
 function NavBar() {
+  const { t } = useTranslation();
+
   const [toggleMenu, setToggleMenu] = useState(false);
 
   const { width } = useWindowDimensions();
@@ -34,7 +37,7 @@ function NavBar() {
         <NavLinks>
           {menuArray.map((item) => (
             <li key={`link-${item}`}>
-              <a href={`#${item}`}>{item}</a>
+              <a href={`#${item.replace('tra-menu-', '')}`}>{t(item)}</a>
             </li>
           ))}
         </NavLinks>
@@ -51,8 +54,11 @@ function NavBar() {
               <NavLinks>
                 {menuArray.map((item) => (
                   <li key={`mobile-menu-${item}`}>
-                    <a href={`#${item}`} onClick={() => setToggleMenu(false)}>
-                      {item}
+                    <a
+                      href={`#${item.replace('tra-menu-', '')}`}
+                      onClick={() => setToggleMenu(false)}
+                    >
+                      {t(item)}
                     </a>
                   </li>
                 ))}

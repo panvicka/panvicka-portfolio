@@ -1,6 +1,7 @@
 {
   "short_name": "Eliska's portfolio",
-  "name": "Eliska's",
+  "name": "Eliska's portfolio",
+  "description": "Portfolio of embedded engineer and full-stack developer in training Eliska Veisova",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#ea5746",
+  "background_color": "whitesmoke"
 }

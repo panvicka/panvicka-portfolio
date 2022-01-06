@@ -25,15 +25,13 @@ function About() {
     const query = '*[_type == "about"]';
 
     client.fetch(query).then((data) => {
-      console.log(`sanity fetching about, data`);
-      console.log(data);
       setAbout(data);
     });
   }, []);
 
   return (
     <PageWrapper column>
-      <SectionTitle>{t('About')}</SectionTitle>
+      <SectionTitle>{t('tra-about')}</SectionTitle>
 
       <AboutContentItemWrapper>
         {about.map((aboutItem) => (

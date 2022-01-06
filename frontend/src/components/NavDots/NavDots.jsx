@@ -7,7 +7,11 @@ function Navigation({ active }) {
   return (
     <NavigationDotsWrapper>
       {menuArray.map((item) => (
-        <NavigationDot href={`#${item}`} key={`dot-nav-${item}`} activated={active === item} />
+        <NavigationDot
+          href={`#${item.replace('tra-menu-', '')}`}
+          key={`dot-nav-${item}`}
+          activated={active === item.replace('tra-menu-', '')}
+        />
       ))}
     </NavigationDotsWrapper>
   );

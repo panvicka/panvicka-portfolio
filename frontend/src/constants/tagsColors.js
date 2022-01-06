@@ -1,59 +1,62 @@
+const webDevColor = '#f5c28e';
+const embeddedColor = '#ebb4ae';
+
 const tagsColors = [
   {
     name: 'C',
-    color: 'blue',
+    color: embeddedColor,
   },
   {
     name: 'STM32',
-    color: 'red',
+    color: embeddedColor,
   },
   {
     name: 'ADC/DAC',
-    color: 'green',
+    color: embeddedColor,
   },
   {
     name: 'DMA',
-    color: 'pink',
+    color: embeddedColor,
   },
   {
     name: 'PCB design',
-    color: 'orange',
+    color: embeddedColor,
   },
   {
     name: 'React',
-    color: 'yellow',
+    color: webDevColor,
   },
   {
     name: 'Vue',
-    color: 'brown',
+    color: webDevColor,
   },
   {
     name: 'NodeRed',
-    color: 'white',
+    color: webDevColor,
   },
   {
     name: 'ioSocket',
-    color: 'violet',
+    color: webDevColor,
   },
   {
     name: 'Bootstrap',
-    color: 'pink',
+    color: webDevColor,
   },
   {
     name: 'HTML/JS/CSS',
-    color: 'rosa',
+    color: webDevColor,
   },
   {
     name: 'Sass',
-    color: 'red',
+    color: webDevColor,
   },
   {
     name: 'Typescript',
-    color: 'light-blue',
+    color: webDevColor,
   },
   {
     name: 'Pug',
-    color: 'grey',
+    color: webDevColor,
   },
 ];
 

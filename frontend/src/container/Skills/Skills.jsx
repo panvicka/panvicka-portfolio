@@ -24,8 +24,6 @@ function Skills() {
     const query = '*[_type == "skills"]';
 
     client.fetch(query).then((data) => {
-      console.log(`sanity fetching, data`);
-      console.log(data);
       setSkills(data);
     });
   }, []);

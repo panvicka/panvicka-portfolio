@@ -19,8 +19,6 @@ function Work() {
     const query = '*[_type == "work"]';
 
     client.fetch(query).then((data) => {
-      console.log(`sanity fetching, data work`);
-      console.log(data);
       setWork(data);
     });
   }, []);
@@ -50,7 +48,7 @@ function Work() {
 
   return (
     <PageWrapper column>
-      <SectionTitle>{t('Work')}</SectionTitle>
+      <SectionTitle>{t('tra-work')}</SectionTitle>
 
       <WorkItemWrapper>
         {work.map((workItem) => (
@@ -64,7 +62,7 @@ function Work() {
             <WorkHeader>{workItem.name[currentLanguage]}</WorkHeader>
             {workItem.link && (
               <button type="button">
-                <a href={workItem.link}>Go to the project</a>
+                <a href={workItem.link}>Check Project</a>
               </button>
             )}
             <p>{workItem.info[currentLanguage]}</p>
