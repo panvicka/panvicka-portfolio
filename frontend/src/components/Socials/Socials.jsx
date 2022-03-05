@@ -9,7 +9,7 @@ function Socials({ size = 40 }) {
   return (
     <>
       <SocialIcon size={size}>
-        <a href="https://www.linkedin.com/">
+        <a href="https://www.linkedin.com/in/eliska-veisova-143a37233/">
           <BsLinkedin />
         </a>
       </SocialIcon>
