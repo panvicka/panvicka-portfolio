@@ -9,27 +9,27 @@ function Socials({ size = 40 }) {
   return (
     <>
       <SocialIcon size={size}>
-        <a href="https://www.linkedin.com/in/eliska-veisova-143a37233/">
+        <a href="https://www.linkedin.com/in/eliska-veisova-143a37233/" aria-label="LinkedIn">
           <BsLinkedin />
         </a>
       </SocialIcon>
       <SocialIcon size={size}>
-        <a href="https://github.com/panvicka">
+        <a href="https://github.com/panvicka" aria-label="Github">
           <BsGithub />
         </a>
       </SocialIcon>
       <SocialIcon size={size}>
-        <a href="https://twitter.com/panvicka">
+        <a href="https://twitter.com/panvicka" aria-label="Twitter">
           <BsTwitter />
         </a>
       </SocialIcon>
       <SocialIcon size={size}>
-        <a href="https://codepen.io/panvicka">
+        <a href="https://codepen.io/panvicka" aria-label="CodePen">
           <ImCodepen />
         </a>
       </SocialIcon>
       <SocialIcon size={size}>
-        <a href="https://stackoverflow.com/users/13248487/pan-vi">
+        <a href="https://stackoverflow.com/users/13248487/pan-vi" aria-label="StackOverflow">
           <BsStackOverflow />
         </a>
       </SocialIcon>
