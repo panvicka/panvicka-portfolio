@@ -1,5 +1,6 @@
+/* eslint-disable */
 import React from 'react';
-
+import loadable from '@loadable/component';
 import 'flag-icons/css/flag-icons.css';
 
 import i18n from 'i18next';
@@ -8,8 +9,13 @@ import HttpApi from 'i18next-http-backend';
 import { initReactI18next } from 'react-i18next';
 
 import { NavBar, Cookie } from './components';
-import { About, Footer, Home, Bio, Skills, Work, Contact } from './container';
+import { About, Footer, Home, Skills, Work } from './container';
+
+const Contact = loadable(() => import('./container/Contact/Contact'));
+const Bio = loadable(() => import('./container/Bio/Bio'));
+
 import LanguageProvider from './context/LanguageContext';
+/* eslint-enable */
 
 const storedLang = localStorage.getItem('i18nextLng');
 

@@ -10,7 +10,7 @@ export const BioInfoWrapper = styled(globalStyles.FlexCol)`
   @media ${device.tablet} {
     flex-direction: row;
     align-items: flex-start;
-   }
+  }
 `;
 
 export const BlockElement = styled(globalStyles.FlexRow)`

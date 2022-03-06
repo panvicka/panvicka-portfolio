@@ -5,6 +5,7 @@
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
     "@hookform/error-message": "^2.0.0",
+    "@loadable/component": "^5.15.2",
     "@sanity/client": "^3.1.0",
     "@sanity/image-url": "^1.0.1",
     "@testing-library/jest-dom": "^5.16.2",
@@ -58,6 +59,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.5.4",
+    "babel-preset-react-app": "^10.0.1",
     "eslint": "^8.10.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",

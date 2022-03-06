@@ -52,7 +52,7 @@ function LanguageSelect({ size }) {
 
   return (
     <Dropdown trigger={['click']} overlay={menu} animation="slide-up">
-      <DropDownButton size={size}>
+      <DropDownButton size={size} aria-label="change page language">
         {languages.map((lan) => {
           if (lan.countryCode === currentLanguage) {
             return <span key={lan.countryCode} className={`fi fi-${lan.countryCode}`} />;

@@ -4,6 +4,15 @@
   "env": {
     "browser": true
   },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true,
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["babel-preset-react-app"]
+    }
+  },
   "rules": {
     "prettier/prettier": ["warn", { "endOfLine": "auto" }],
     "no-underscore-dangle": ["error", { "allow": ["_id"] }],
