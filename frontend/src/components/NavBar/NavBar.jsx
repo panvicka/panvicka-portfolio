@@ -30,14 +30,25 @@ function NavBar() {
       <NavContentWrapper>
         <LogoContainer>
           <a href="#home">
-            <img src={images.snecekLogo} alt="snail logo" className="rounded" />
+            <img
+              src={images.snecekLogo}
+              alt="snail logo"
+              className="rounded"
+              width="408"
+              height="317"
+            />
           </a>
         </LogoContainer>
 
         <NavLinks>
           {menuArray.map((item) => (
             <li key={`link-${item}`}>
-              <a href={`#${item.replace('tra-menu-', '')}`}>{t(item)}</a>
+              <a
+                href={`#${item.replace('tra-menu-', '')}`}
+                aria-label={`go to section ${item.replace('tra-menu-', '')}`}
+              >
+                {t(item)}
+              </a>
             </li>
           ))}
         </NavLinks>
@@ -57,6 +68,7 @@ function NavBar() {
                     <a
                       href={`#${item.replace('tra-menu-', '')}`}
                       onClick={() => setToggleMenu(false)}
+                      aria-label={`go to section ${item.replace('tra-menu-', '')}`}
                     >
                       {t(item)}
                     </a>

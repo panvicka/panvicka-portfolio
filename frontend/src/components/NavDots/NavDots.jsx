@@ -11,6 +11,7 @@ function Navigation({ active }) {
           href={`#${item.replace('tra-menu-', '')}`}
           key={`dot-nav-${item}`}
           activated={active === item.replace('tra-menu-', '')}
+          aria-label={`go to section ${item.replace('tra-menu-', '')}`}
         />
       ))}
     </NavigationDotsWrapper>

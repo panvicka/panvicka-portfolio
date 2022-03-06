@@ -61,7 +61,7 @@ function Work() {
           >
             <WorkHeader>{workItem.name[currentLanguage]}</WorkHeader>
             {workItem.link && (
-              <button type="button">
+              <button type="button" aria-label={`go to ${workItem.name} project page}`}>
                 <a href={workItem.link}>Check Project</a>
               </button>
             )}

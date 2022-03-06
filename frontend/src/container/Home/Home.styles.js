@@ -65,7 +65,8 @@ export const HeroText = styled(globalStyles.FlexCol)`
   span.greeting {
     text-transform: uppercase;
     font-size: 1.4em;
-    color: var(--accent-color);
+    // accent color was too light
+    color: #448068;
   }
 
   span.name {

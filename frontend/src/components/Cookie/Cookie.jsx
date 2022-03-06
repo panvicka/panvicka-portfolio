@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { motion } from 'framer-motion';
 import CookieConsent from 'react-cookie-consent';
 import { useTranslation } from 'react-i18next';
 
@@ -8,7 +7,7 @@ import './Cookie.scss';
 
 const style = {
   background: '#5db090',
-  color: '#3d5056',
+  color: '#000000',
   fontSize: '1.2em',
 };
 
@@ -29,7 +28,7 @@ function Cookie() {
       buttonStyle={buttonStyle}
       expires={150}
     >
-      This website uses cookies to enhance the user experience.{' '}
+      {t('tra-cookies')}
     </CookieConsent>
   );
 }

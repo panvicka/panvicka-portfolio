@@ -150,7 +150,7 @@ function Contact() {
             ref={recaptchaRef}
           />
 
-          <button disabled={!validCaptcha} type="submit">
+          <button disabled={!validCaptcha} type="submit" aria-label="send the message">
             <BsEnvelope />
           </button>
         </ControlWrapper>

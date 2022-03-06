@@ -46,7 +46,9 @@ function About() {
             </AboutYears>
             <AboutContentHeader>{aboutItem.title[currentLanguage]}</AboutContentHeader>
             <AboutContentInfo>
-              {aboutItem.aboutImage && <img alt="" src={urlFor(aboutItem.aboutImage)} />}
+              {aboutItem.aboutImage && (
+                <img alt="" width="512" height="512" src={urlFor(aboutItem.aboutImage)} />
+              )}
               <p>{aboutItem.text[currentLanguage]}</p>
             </AboutContentInfo>
           </AboutContentItem>

@@ -51,7 +51,24 @@ function Home() {
             fill="#ea5746"
           />
         </svg>
-        <img src={images.profilePic} alt="women with grey shirt, glasses, brown hair, smiling" />
+
+        <picture>
+          <source
+            srcSet={images.profilePicWebp}
+            type="image/webp"
+            width="378"
+            height="660"
+            alt="women with grey shirt, glasses, brown hair, smiling"
+          />
+          <source
+            srcSet={images.profilePic}
+            type="image/jpeg"
+            width="378"
+            height="660"
+            alt="women with grey shirt, glasses, brown hair, smiling"
+          />
+          <img src={images.profilePic} alt="women with grey shirt, glasses, brown hair, smiling" />
+        </picture>
       </HeroImage>
 
       {width > size.tablet ? (
