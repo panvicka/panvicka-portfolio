@@ -88,7 +88,6 @@ export const MenuContent = styled(motion.div)`
       padding: 0.3em;
       width: 100%;
       text-align: center;
-      border: 1px solid green;
     }
   }
 
