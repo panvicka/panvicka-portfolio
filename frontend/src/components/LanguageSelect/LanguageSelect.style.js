@@ -2,8 +2,8 @@
 import styled from 'styled-components';
 
 export const DropDownButton = styled.button`
-  width: ${(props) => `${props.size}px`};
-  height: ${(props) => `${props.size}px`};
+  min-width: ${(props) => `${props.size}px`};
+  min-height: ${(props) => `${props.size}px`};
   border: none;
   position: relative;
   overflow: hidden;
